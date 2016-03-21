@@ -20,18 +20,55 @@ class ShareViewController: SLComposeServiceViewController {
     // We don't want to show the view actually
     // as we directly open our app!
     override func viewWillAppear(animated: Bool) {
-        self.view.hidden = true
-        self.cancel()
-        print("Hi")
-        self.doClipping()
+        //self.view.hidden = true
+        //self.cancel()
+        super.viewWillAppear(animated)
+        //print("Hi")
+        //self.doClipping()
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        for item: AnyObject in self.extensionContext!.inputItems {
+            
+            let inputItem = item as! NSExtensionItem
+            
+            for provider: AnyObject in inputItem.attachments! {
+                
+                let itemProvider = provider as! NSItemProvider
+                
+                if itemProvider.hasItemConformingToTypeIdentifier(kUTTypePropertyList as String) {
+                    
+                    itemProvider.loadItemForTypeIdentifier(kUTTypePropertyList as String, options: nil, completionHandler: { (data, error) -> Void in
+                        print (data)
+                        if let resultDict = data as? NSDictionary {
+                            print(resultDict)
+                        }
+                        
+                    })
+                    
+//                    itemProvider.loadItemForTypeIdentifier(kUTTypePropertyList as String, options: nil, completionHandler: { [unowned self] (result: NSSecureCoding!, error: NSError!) -> Void in
+//                        
+//                        if let resultDict = result as? NSDictionary {
+//                            
+//                            self.jsString = resultDict[NSExtensionJavaScriptPreprocessingResultsKey]!["content"] as? NSString
+//                        }
+//                        
+//                        });
+                    
+                }
+            }
+        }
+    }
+
     
     // We directly forward all the values retrieved from Action.js to our app
     private func doClipping() {
         self.loadJsExtensionValues { dict in
-            let url = "myAppScheme://mobileclipper?" + self.dictionaryToQueryString(dict)
-            print(url);
-            self.doOpenUrl(url)
+//            let url = "myAppScheme://MVP_V1?" + self.dictionaryToQueryString(dict)
+//            print(url);
+//            self.doOpenUrl(url)
         }
     }
     
