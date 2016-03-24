@@ -9,6 +9,7 @@
 import UIKit
 import Social
 import MobileCoreServices
+import ImageWebShareFramework
 
 @available(iOSApplicationExtension 8.0, *)
 class ShareViewController: SLComposeServiceViewController {
@@ -17,8 +18,7 @@ class ShareViewController: SLComposeServiceViewController {
     let contentTypeTitle = "public.plain-text"
     let contentTypeUrl = "public.url"
     
-    // We don't want to show the view actually
-    // as we directly open our app!
+    
     override func viewWillAppear(animated: Bool) {
         //self.view.hidden = true
         //self.cancel()
@@ -41,34 +41,78 @@ class ShareViewController: SLComposeServiceViewController {
                 if itemProvider.hasItemConformingToTypeIdentifier(kUTTypePropertyList as String) {
                     
                     itemProvider.loadItemForTypeIdentifier(kUTTypePropertyList as String, options: nil, completionHandler: { (data, error) -> Void in
-                        print (data)
+                        //print (data)
+                        let imageService = ImageService.sharedService
+                        
                         if let resultDict = data as? NSDictionary {
-                            print(resultDict)
+                            
+                            if let urlDictionary = resultDict[NSExtensionJavaScriptPreprocessingResultsKey] as? [String:AnyObject] {
+                                
+                                var stringArray = [String]()
+                                
+                                var titleOfImage:String = urlDictionary["title"] as! String
+                                let baseUrl:String = urlDictionary["base_url"] as! String
+                                let masurl = "http://www.marksandspencer.com/"
+                                var imageDictionary = [String:String]()
+                                
+                                for (keys,values) in urlDictionary {
+                                    if keys == "title" {
+                                        titleOfImage = values as! String
+                                    } else if keys == "base_url" {
+                                        //baseUrl =  values as! String
+                                    }
+                                    else {
+                                        if baseUrl == masurl {
+                                            if let toBeFormattedURL = values as? String {
+                                                if (toBeFormattedURL.lowercaseString as NSString).substringToIndex(2) == "//" {
+                                                    
+                                                    imageDictionary[keys] = "http:" + toBeFormattedURL
+                                                    
+                                                }else if (toBeFormattedURL.lowercaseString as NSString).substringToIndex(1) == "/" {
+                                                    
+                                                    imageDictionary[keys] = "http://www.marksandspencer.com" + toBeFormattedURL
+                                                    
+                                                }
+                                                else {
+                                                    imageDictionary[keys] = values as? String
+                                                }
+                                            }
+                                            
+                                        } else {
+                                            imageDictionary[keys] = values as? String
+                                        }
+                                    }
+                                    
+                                    
+                                    if let url = NSURL(string: values as! String) {
+                                        stringArray.append(values as! String)
+                                        
+                                    }
+                                }
+                                
+                                
+                                imageService.saveImagesURL(stringArray, title: titleOfImage,urlDict: imageDictionary)
+                                                           }
+                            
                         }
                         
+                        
+                        
+                        
                     })
-                    
-//                    itemProvider.loadItemForTypeIdentifier(kUTTypePropertyList as String, options: nil, completionHandler: { [unowned self] (result: NSSecureCoding!, error: NSError!) -> Void in
-//                        
-//                        if let resultDict = result as? NSDictionary {
-//                            
-//                            self.jsString = resultDict[NSExtensionJavaScriptPreprocessingResultsKey]!["content"] as? NSString
-//                        }
-//                        
-//                        });
-                    
+                                       
                 }
             }
         }
     }
-
+    
     
     // We directly forward all the values retrieved from Action.js to our app
     private func doClipping() {
         self.loadJsExtensionValues { dict in
-//            let url = "myAppScheme://MVP_V1?" + self.dictionaryToQueryString(dict)
-//            print(url);
-//            self.doOpenUrl(url)
+            //            let url = "myAppScheme://MVP_V1?" + self.dictionaryToQueryString(dict)
+            //            print(url);
+            //            self.doOpenUrl(url)
         }
     }
     
@@ -179,3 +223,8 @@ extension NSObject {
         })
     }
 }
+
+
+
+
+

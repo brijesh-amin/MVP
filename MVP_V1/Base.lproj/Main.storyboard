@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="703-4V-yAM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="nF2-7o-l8c">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -65,24 +65,24 @@
             </objects>
             <point key="canvasLocation" x="597" y="-243"/>
         </scene>
-        <!--ShareImage-->
+        <!--Share-->
         <scene sceneID="Y4e-8T-DUF">
             <objects>
                 <tableViewController id="ehm-xi-bFh" customClass="ImagesTableViewController" customModule="MVP_V1" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="kgZ-g9-NU2">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="156" sectionHeaderHeight="22" sectionFooterHeight="22" id="kgZ-g9-NU2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="imageCell" textLabel="JDo-AL-43S" style="IBUITableViewCellStyleDefault" id="J0x-g1-mm1">
-                                <rect key="frame" x="0.0" y="86" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="600" height="156"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J0x-g1-mm1" id="rQK-vx-3IW">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="155"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JDo-AL-43S">
-                                            <rect key="frame" x="15" y="0.0" width="550" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="550" height="155"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -90,10 +90,56 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageTableViewCell" rowHeight="156" id="gxA-wZ-DPW" customClass="ImageTableViewCell" customModule="MVP_V1" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="242" width="600" height="156"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gxA-wZ-DPW" id="uek-3T-l13">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="155"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tMA-8e-1WG">
+                                            <rect key="frame" x="8" y="8" width="196" height="140"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="196" id="P3k-3y-rK5"/>
+                                                <constraint firstAttribute="height" constant="140" id="g5J-q5-Cel"/>
+                                            </constraints>
+                                        </imageView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Jz4-Vx-NfR">
+                                            <rect key="frame" x="96" y="75" width="20" height="20"/>
+                                        </activityIndicatorView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wR0-JG-r4s">
+                                            <rect key="frame" x="212" y="48" width="380" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="Qfb-42-JoI"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="tMA-8e-1WG" firstAttribute="top" secondItem="uek-3T-l13" secondAttribute="top" constant="8" id="0Nb-Ko-Ax6"/>
+                                        <constraint firstAttribute="bottom" secondItem="tMA-8e-1WG" secondAttribute="bottom" constant="17" id="34N-b5-FVK"/>
+                                        <constraint firstItem="wR0-JG-r4s" firstAttribute="centerX" secondItem="uek-3T-l13" secondAttribute="centerX" id="8nO-5N-0c5"/>
+                                        <constraint firstAttribute="trailing" secondItem="wR0-JG-r4s" secondAttribute="trailing" constant="8" id="HDX-36-JQG"/>
+                                        <constraint firstItem="tMA-8e-1WG" firstAttribute="top" secondItem="uek-3T-l13" secondAttribute="top" constant="8" id="JEI-Jg-4rI"/>
+                                        <constraint firstItem="tMA-8e-1WG" firstAttribute="leading" secondItem="uek-3T-l13" secondAttribute="leading" constant="8" id="JxA-7i-clS"/>
+                                        <constraint firstItem="wR0-JG-r4s" firstAttribute="leading" secondItem="tMA-8e-1WG" secondAttribute="trailing" constant="8" id="N3i-3t-X8Q"/>
+                                        <constraint firstItem="wR0-JG-r4s" firstAttribute="centerY" secondItem="uek-3T-l13" secondAttribute="centerY" id="qrg-sx-06I"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="34N-b5-FVK"/>
+                                            <exclude reference="JEI-Jg-4rI"/>
+                                            <exclude reference="8nO-5N-0c5"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Wf5-1n-LCD" kind="show" identifier="showImageSegue" id="BLL-Ge-imG">
-                                        <nil key="action"/>
-                                    </segue>
+                                    <outlet property="photoDownloadActivityIndicator" destination="Jz4-Vx-NfR" id="Y2y-qw-pXr"/>
+                                    <outlet property="photoImage" destination="tMA-8e-1WG" id="UcD-UL-EXw"/>
+                                    <outlet property="photoImageKeywords" destination="wR0-JG-r4s" id="hHP-49-209"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -102,9 +148,7 @@
                             <outlet property="delegate" destination="ehm-xi-bFh" id="u1X-qP-bMr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ShareImage" id="QOo-6d-ouY">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Cu0-W5-LAv"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Share" id="QOo-6d-ouY"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nd6-qz-rjk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

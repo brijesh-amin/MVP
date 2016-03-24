@@ -20,6 +20,9 @@
 		1BC6D0C71C9570C200744718 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BC6D0C51C9570C200744718 /* MainInterface.storyboard */; };
 		1BC6D0CB1C9570C200744718 /* ImageShare.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1BC6D0C11C9570C200744718 /* ImageShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1BC6D0D11C957C1900744718 /* action.js in Resources */ = {isa = PBXBuildFile; fileRef = 1BC6D0D01C957C1900744718 /* action.js */; };
+		9D71F6041CA3AA71005AC34E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71F6031CA3AA70005AC34E /* ImageCache.swift */; };
+		9D71F6061CA3AA8F005AC34E /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71F6051CA3AA8F005AC34E /* NetworkClient.swift */; };
+		9D71F6081CA3AB89005AC34E /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71F6071CA3AB89005AC34E /* ImageTableViewCell.swift */; };
 		9DE91CB11C9D484A00B1E10C /* ImageWebShareFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE91CAA1C9D484A00B1E10C /* ImageWebShareFramework.framework */; };
 		9DE91CB21C9D484A00B1E10C /* ImageWebShareFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE91CAA1C9D484A00B1E10C /* ImageWebShareFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9DE91CB81C9D490A00B1E10C /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE91CB71C9D490A00B1E10C /* ImageService.swift */; };
@@ -106,6 +109,9 @@
 		1BC6D0C61C9570C200744718 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		1BC6D0C81C9570C200744718 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BC6D0D01C957C1900744718 /* action.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = action.js; sourceTree = "<group>"; };
+		9D71F6031CA3AA70005AC34E /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		9D71F6051CA3AA8F005AC34E /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		9D71F6071CA3AB89005AC34E /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		9DE91C7E1C9D3FD900B1E10C /* MVP_V1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MVP_V1.entitlements; sourceTree = "<group>"; };
 		9DE91C7F1C9D43F400B1E10C /* ImageShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ImageShare.entitlements; sourceTree = "<group>"; };
 		9DE91CAA1C9D484A00B1E10C /* ImageWebShareFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageWebShareFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +202,7 @@
 				1BC6D09B1C95709C00744718 /* Info.plist */,
 				9DE91CBC1C9D4A8D00B1E10C /* ImagesTableViewController.swift */,
 				9DE91CBE1C9D4C5200B1E10C /* ImageViewController.swift */,
+				9D71F6071CA3AB89005AC34E /* ImageTableViewCell.swift */,
 			);
 			path = MVP_V1;
 			sourceTree = "<group>";
@@ -233,6 +240,8 @@
 		9DE91CAB1C9D484A00B1E10C /* ImageWebShareFramework */ = {
 			isa = PBXGroup;
 			children = (
+				9D71F6051CA3AA8F005AC34E /* NetworkClient.swift */,
+				9D71F6031CA3AA70005AC34E /* ImageCache.swift */,
 				9DE91CAC1C9D484A00B1E10C /* ImageWebShareFramework.h */,
 				9DE91CAE1C9D484A00B1E10C /* Info.plist */,
 				9DE91CB71C9D490A00B1E10C /* ImageService.swift */,
@@ -358,6 +367,7 @@
 				TargetAttributes = {
 					1BC6D0871C95709C00744718 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = WT3F64R6R2;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -459,6 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D71F6081CA3AB89005AC34E /* ImageTableViewCell.swift in Sources */,
 				1BC6D08E1C95709C00744718 /* RootViewController.swift in Sources */,
 				9DE91CBD1C9D4A8D00B1E10C /* ImagesTableViewController.swift in Sources */,
 				1BC6D0921C95709C00744718 /* ModelController.swift in Sources */,
@@ -496,8 +507,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D71F6041CA3AA71005AC34E /* ImageCache.swift in Sources */,
 				9DE91CB81C9D490A00B1E10C /* ImageService.swift in Sources */,
 				9DE91CBA1C9D496100B1E10C /* Image.swift in Sources */,
+				9D71F6061CA3AA8F005AC34E /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -847,6 +860,7 @@
 				9DE91CB51C9D484B00B1E10C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

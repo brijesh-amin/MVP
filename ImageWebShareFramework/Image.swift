@@ -7,28 +7,28 @@
 import Foundation
 import UIKit
 
-public class Image: NSObject, NSCoding {
+public class Image: NSObject {
     
-    public let title: String
-    public let image: UIImage
-    public var url: NSURL?
+    public var id:String?
+    public var title: String? // from js - title of web site
+    public var url: NSURL? //final url (after processing)
     
-    public init(imgTitle: String, imgImage: UIImage) {
+    public init(imgTitle: String?,imgId:String?, imgUrl:NSURL?) {
         title = imgTitle
-        image = imgImage
+        url = imgUrl
+        id = imgId
         super.init()
     }
     
-    public required init?(coder aDecoder: NSCoder) {
-        title = aDecoder.decodeObjectForKey("title") as! String
-        image = aDecoder.decodeObjectForKey("image") as! UIImage
-        url = aDecoder.decodeObjectForKey("url") as? NSURL
+    // Download image to documents directory and retrieve it using image identifier
+    public var image: UIImage? {
+        get {
+            return NetworkClient.Caches.imageCache.imageWithIdentifier(id!)
+        }
+        set {
+            NetworkClient.Caches.imageCache.storeImage(newValue, withIdentifier: id!)
+        }
     }
     
-    public func encodeWithCoder(aCoder: NSCoder)  {
-        aCoder.encodeObject(title, forKey: "title")
-        aCoder.encodeObject(image, forKey: "image")
-        aCoder.encodeObject(url, forKey: "url")
-    }
     
 }
