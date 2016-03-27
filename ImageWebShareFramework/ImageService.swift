@@ -56,9 +56,10 @@ public class ImageService {
         extensionImages = [Image]()
     }
     public func loadImageURL() -> [NSURL] {
+    
+        let loadedImageURL:[NSURL] = []
         
-        
-        var loadedImageURL:[NSURL] = []
+        removeImages()
         
         let userDefaults = NSUserDefaults(suiteName: "group.com.brij.web")
         var titleOfImage:String? = nil
@@ -100,6 +101,10 @@ public class ImageService {
         //        print(imagesData)
         //NSKeyedArchiver.archiveRootObject(imagesURL, toFile: imageFilePath)
         let userDefaults = NSUserDefaults(suiteName: "group.com.brij.web")
+        userDefaults!.removeObjectForKey("storeImageURLS")
+        userDefaults!.removeObjectForKey("title")
+        userDefaults!.removeObjectForKey("urlDictionary")
+       
         userDefaults!.setObject(urlArray, forKey: "storeImageURLS")
         userDefaults!.setObject(title, forKey: "title")
         userDefaults!.setObject(urlDict, forKey: "urlDictionary")

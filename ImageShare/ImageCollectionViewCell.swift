@@ -26,7 +26,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         photoImageView.layer.borderColor = UIColor.blackColor().CGColor
-        photoImageView.layer.cornerRadius = 10
+        photoImageView.layer.cornerRadius = 5
         photoImageView.layer.borderWidth = 1
     }
 
