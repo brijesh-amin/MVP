@@ -45,7 +45,19 @@ public class ImageService {
         
         
     }
+    
+    func removeImages() {
+        if extensionImages.count > 0 {
+            for image in extensionImages {
+                image.image = nil
+            }
+        }
+        
+        extensionImages = [Image]()
+    }
     public func loadImageURL() -> [NSURL] {
+        
+        
         var loadedImageURL:[NSURL] = []
         
         let userDefaults = NSUserDefaults(suiteName: "group.com.brij.web")

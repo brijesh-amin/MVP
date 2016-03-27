@@ -23,6 +23,8 @@
 		9D71F6041CA3AA71005AC34E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71F6031CA3AA70005AC34E /* ImageCache.swift */; };
 		9D71F6061CA3AA8F005AC34E /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71F6051CA3AA8F005AC34E /* NetworkClient.swift */; };
 		9D71F6081CA3AB89005AC34E /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71F6071CA3AB89005AC34E /* ImageTableViewCell.swift */; };
+		9DB9363A1CA82E1300309235 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB936391CA82E1300309235 /* ImageCollectionViewCell.swift */; };
+		9DB9363C1CA84B8700309235 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DB9363B1CA84B8700309235 /* Assets.xcassets */; };
 		9DE91CB11C9D484A00B1E10C /* ImageWebShareFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE91CAA1C9D484A00B1E10C /* ImageWebShareFramework.framework */; };
 		9DE91CB21C9D484A00B1E10C /* ImageWebShareFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE91CAA1C9D484A00B1E10C /* ImageWebShareFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9DE91CB81C9D490A00B1E10C /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE91CB71C9D490A00B1E10C /* ImageService.swift */; };
@@ -112,6 +114,8 @@
 		9D71F6031CA3AA70005AC34E /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		9D71F6051CA3AA8F005AC34E /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		9D71F6071CA3AB89005AC34E /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		9DB936391CA82E1300309235 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		9DB9363B1CA84B8700309235 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DE91C7E1C9D3FD900B1E10C /* MVP_V1.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MVP_V1.entitlements; sourceTree = "<group>"; };
 		9DE91C7F1C9D43F400B1E10C /* ImageShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = ImageShare.entitlements; sourceTree = "<group>"; };
 		9DE91CAA1C9D484A00B1E10C /* ImageWebShareFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ImageWebShareFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -233,6 +237,8 @@
 				1BC6D0C51C9570C200744718 /* MainInterface.storyboard */,
 				1BC6D0C81C9570C200744718 /* Info.plist */,
 				1BC6D0D01C957C1900744718 /* action.js */,
+				9DB936391CA82E1300309235 /* ImageCollectionViewCell.swift */,
+				9DB9363B1CA84B8700309235 /* Assets.xcassets */,
 			);
 			path = ImageShare;
 			sourceTree = "<group>";
@@ -451,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BC6D0D11C957C1900744718 /* action.js in Resources */,
+				9DB9363C1CA84B8700309235 /* Assets.xcassets in Resources */,
 				1BC6D0C71C9570C200744718 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +506,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DB9363A1CA82E1300309235 /* ImageCollectionViewCell.swift in Sources */,
 				1BC6D0C41C9570C200744718 /* ShareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

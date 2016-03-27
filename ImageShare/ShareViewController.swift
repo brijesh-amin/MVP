@@ -12,19 +12,52 @@ import MobileCoreServices
 import ImageWebShareFramework
 
 @available(iOSApplicationExtension 8.0, *)
-class ShareViewController: SLComposeServiceViewController {
+class ShareViewController: UIViewController, UICollectionViewDataSource,UICollectionViewDelegate {
     
+    @IBOutlet weak var photoCollectionView: UICollectionView!
     let contentTypeList = kUTTypePropertyList as String
     let contentTypeTitle = "public.plain-text"
     let contentTypeUrl = "public.url"
     
+    var images:[Image] = [Image]() //ImageService.sharedService.extensionImages
+
+    //SLComposeServiceViewController
+    @IBAction func luanchApp(sender: AnyObject) {
+       // self.launchContainingApplication()
+       // cancel()
+         self.extensionContext!.completeRequestReturningItems(nil, completionHandler: nil)
+    }
     
+    //Layout collection view
     override func viewWillAppear(animated: Bool) {
         //self.view.hidden = true
-        //self.cancel()
+       // self.cancel()
         super.viewWillAppear(animated)
         //print("Hi")
-        //self.doClipping()
+       // self.doClipping()
+        //self.launchContainingApplication()
+       
+        //self.doOpenUrl("MVP_V1://")
+    }
+    
+    
+    func launchContainingApplication() {
+//        NSURL *url = [NSURL URLWithString:@"floblog://"];
+//        [self.extensionContext openURL:url completionHandler:nil];
+//        
+        let url = NSURL(string: "MVP_V1://")
+        
+        if let appURL = url {
+            //self.extensionContext?.openURL(appURL, completionHandler: nil)
+            var responder: UIResponder? = self
+            while let r = responder {
+                if r.respondsToSelector("openURL:") {
+                    r.performSelector("openURL:", withObject: appURL)
+                    break
+                }
+                responder = r.nextResponder()
+            }
+        }
     }
     
     override func viewDidLoad() {
@@ -52,7 +85,7 @@ class ShareViewController: SLComposeServiceViewController {
                                 
                                 var titleOfImage:String = urlDictionary["title"] as! String
                                 let baseUrl:String = urlDictionary["base_url"] as! String
-                                let masurl = "http://www.marksandspencer.com/"
+                                //let masurl = "http://www.marksandspencer.com/"
                                 var imageDictionary = [String:String]()
                                 
                                 for (keys,values) in urlDictionary {
@@ -62,7 +95,7 @@ class ShareViewController: SLComposeServiceViewController {
                                         //baseUrl =  values as! String
                                     }
                                     else {
-                                        if baseUrl == masurl {
+                                       // if baseUrl == masurl {
                                             if let toBeFormattedURL = values as? String {
                                                 if (toBeFormattedURL.lowercaseString as NSString).substringToIndex(2) == "//" {
                                                     
@@ -70,7 +103,9 @@ class ShareViewController: SLComposeServiceViewController {
                                                     
                                                 }else if (toBeFormattedURL.lowercaseString as NSString).substringToIndex(1) == "/" {
                                                     
-                                                    imageDictionary[keys] = "http://www.marksandspencer.com" + toBeFormattedURL
+                                                   // imageDictionary[keys] = "http://www.marksandspencer.com" + toBeFormattedURL
+                                                    
+                                                    imageDictionary[keys] = baseUrl + toBeFormattedURL
                                                     
                                                 }
                                                 else {
@@ -78,11 +113,10 @@ class ShareViewController: SLComposeServiceViewController {
                                                 }
                                             }
                                             
-                                        } else {
-                                            imageDictionary[keys] = values as? String
-                                        }
+//                                        } else {
+//                                            imageDictionary[keys] = values as? String
+//                                        }
                                     }
-                                    
                                     
                                     if let url = NSURL(string: values as! String) {
                                         stringArray.append(values as! String)
@@ -90,14 +124,16 @@ class ShareViewController: SLComposeServiceViewController {
                                     }
                                 }
                                 
+                                dispatch_async(dispatch_get_main_queue()) {
+                                    imageService.saveImagesURL(stringArray, title: titleOfImage,urlDict: imageDictionary)
+                                    imageService.loadImageURL()
+                                    self.images = imageService.extensionImages
+                                    self.photoCollectionView.reloadData()
+                                }
                                 
-                                imageService.saveImagesURL(stringArray, title: titleOfImage,urlDict: imageDictionary)
-                                                           }
-                            
+                              
+                            }
                         }
-                        
-                        
-                        
                         
                     })
                                        
@@ -106,13 +142,87 @@ class ShareViewController: SLComposeServiceViewController {
         }
     }
     
+    //MARK:- UICollectionView
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return images.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = photoCollectionView.dequeueReusableCellWithReuseIdentifier("photoCollectionViewCell", forIndexPath: indexPath) as! ImageCollectionViewCell
+        cell.layer.shouldRasterize = true
+        cell.layer.rasterizationScale = UIScreen.mainScreen().scale
+        configureCell(cell, atIndexPath: indexPath)
+        return cell
+    }
+    
+    // This method will download the image and display as soon  as the imgae is downloaded
+    func configureCell(cell:ImageCollectionViewCell, atIndexPath indexPath:NSIndexPath) {
+        
+        // Show the placeholder image till the time image is being downloaded
+        
+        let photo:Image = images[indexPath.row]
+        var cellImage = UIImage(named: "imagePlaceholder")
+        cell.photoImageView.image = nil
+        
+        //cell.photoImageKeywords.text = photo.id!
+        // Set the  image if already available (from hard disk or image cache)
+        
+        if photo.image != nil {
+
+            cellImage = photo.image
+            
+        } else {
+            
+            //If image is not available, download the  image
+            //Start the task that will eventually download the image
+
+            cell.activityIndicator.startAnimating()
+            
+            let task = NetworkClient.sharedInstance().taskForImage(photo.url!) {
+                data, error in
+                if let downloaderror = error {
+                    print("image download error: \(downloaderror.localizedDescription)", terminator: "")
+                    cell.activityIndicator.stopAnimating()
+                }
+                if let imageData = data {
+                    
+                    // Create the image
+                    let image = UIImage(data: imageData)
+                    // Update the model so that information gets cached
+                    photo.image = image
+                    
+                    // update the cell later, on the main thread
+                    dispatch_async(dispatch_get_main_queue()) {
+                        
+                        //photo.downloadStatus = true
+                        cell.photoImageView.image = image
+                        cell.activityIndicator.stopAnimating()
+                    }
+                } else {
+                    print("Data is not convertible to Image Data.")
+
+                        cell.activityIndicator.stopAnimating()
+                    
+                }
+            }
+            cell.taskToCancelifCellIsReused = task
+        }
+        
+        cell.photoImageView.image = cellImage
+    }
     
     // We directly forward all the values retrieved from Action.js to our app
     private func doClipping() {
         self.loadJsExtensionValues { dict in
-            //            let url = "myAppScheme://MVP_V1?" + self.dictionaryToQueryString(dict)
+                        let url = "myAppScheme://MVP_V1?" + self.dictionaryToQueryString(dict)
             //            print(url);
-            //            self.doOpenUrl(url)
+                        self.doOpenUrl(url)
         }
     }
     

@@ -42,13 +42,16 @@ public class NetworkClient: NSObject {
     // Display error
     class func errorForData(data:NSData?, response:NSURLResponse?, error:NSError) -> NSError {
         
-        if let parsedResult = (try? NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments)) as? [String:AnyObject] {
-            
-            if let errorMessage = parsedResult["message"] as? String {
-                let userInfo = [NSLocalizedDescriptionKey : errorMessage]
-                return NSError(domain: "ImageShare Error", code: 1, userInfo: userInfo)
+        if let data = data {
+            if let parsedResult = (try? NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)) as? [String:AnyObject] {
+                
+                if let errorMessage = parsedResult["message"] as? String {
+                    let userInfo = [NSLocalizedDescriptionKey : errorMessage]
+                    return NSError(domain: "ImageShare Error", code: 1, userInfo: userInfo)
+                }
             }
         }
+        
         return error
     }
     
