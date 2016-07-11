@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MVPSideMenu">
+            <connections>
+                <outlet property="headerView" destination="vvb-2q-W9M" id="Qeg-1t-WZF"/>
+                <outlet property="lblEmailID" destination="WzC-bD-fur" id="h6A-nb-pCB"/>
+                <outlet property="tblSideMenu" destination="lGk-Ek-gT2" id="kuX-tf-ZAf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginBack" translatesAutoresizingMaskIntoConstraints="NO" id="yWJ-fj-l5b">
+                    <rect key="frame" x="0.0" y="0.0" width="280" height="568"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lGk-Ek-gT2">
+                    <rect key="frame" x="0.0" y="0.0" width="280" height="568"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="5T9-kt-Psj"/>
+                        <outlet property="delegate" destination="-1" id="kL3-wU-oFM"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="yWJ-fj-l5b" secondAttribute="bottom" id="3za-Ko-Wtg"/>
+                <constraint firstAttribute="trailing" secondItem="lGk-Ek-gT2" secondAttribute="trailing" id="6aQ-ae-RLn"/>
+                <constraint firstAttribute="bottom" secondItem="lGk-Ek-gT2" secondAttribute="bottom" id="6s4-PX-W0I"/>
+                <constraint firstAttribute="trailing" secondItem="lGk-Ek-gT2" secondAttribute="trailing" id="Aht-LL-yKb"/>
+                <constraint firstItem="yWJ-fj-l5b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DnS-n0-HUw"/>
+                <constraint firstAttribute="bottom" secondItem="yWJ-fj-l5b" secondAttribute="bottom" id="NgL-eQ-i3b"/>
+                <constraint firstItem="lGk-Ek-gT2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Rgd-DN-VEg"/>
+                <constraint firstItem="yWJ-fj-l5b" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TID-0M-reH"/>
+                <constraint firstAttribute="bottom" secondItem="lGk-Ek-gT2" secondAttribute="bottom" id="Vr1-fa-uC7"/>
+                <constraint firstItem="lGk-Ek-gT2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="d0k-Lg-NLc"/>
+                <constraint firstItem="lGk-Ek-gT2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nJ0-mv-ut3"/>
+                <constraint firstAttribute="trailing" secondItem="yWJ-fj-l5b" secondAttribute="trailing" id="p7x-Mt-Ykb"/>
+                <constraint firstItem="yWJ-fj-l5b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rOp-AD-StC"/>
+                <constraint firstAttribute="trailing" secondItem="yWJ-fj-l5b" secondAttribute="trailing" id="s5g-lj-A31"/>
+                <constraint firstItem="yWJ-fj-l5b" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="w1u-Nh-eYM"/>
+                <constraint firstItem="lGk-Ek-gT2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xGg-Te-1a1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="766" y="466"/>
+        </view>
+        <view contentMode="scaleToFill" id="vvb-2q-W9M">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="38"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WzC-bD-fur">
+                    <rect key="frame" x="10" y="10" width="262" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="dvX-a2-BuA"/>
+                        <constraint firstAttribute="width" constant="262" id="h2l-Dv-U1Q"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <color key="textColor" red="0.92549019610000005" green="0.87058823529999996" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3Hl-w9-iDr">
+                    <rect key="frame" x="0.0" y="36" width="280" height="2"/>
+                    <color key="backgroundColor" red="0.92549019610000005" green="0.87058823529999996" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="fEb-He-2qt"/>
+                        <constraint firstAttribute="width" constant="280" id="kje-Mj-J6c"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="WzC-bD-fur" secondAttribute="trailing" constant="8" id="7LX-NG-jTd"/>
+                <constraint firstItem="3Hl-w9-iDr" firstAttribute="top" secondItem="WzC-bD-fur" secondAttribute="bottom" constant="10" id="D9Y-fN-g2e"/>
+                <constraint firstItem="3Hl-w9-iDr" firstAttribute="leading" secondItem="vvb-2q-W9M" secondAttribute="leading" id="PZM-Fe-cEd"/>
+                <constraint firstItem="WzC-bD-fur" firstAttribute="leading" secondItem="vvb-2q-W9M" secondAttribute="leading" constant="10" id="Rqw-L4-OCO"/>
+                <constraint firstAttribute="trailing" secondItem="3Hl-w9-iDr" secondAttribute="trailing" id="pUW-Ib-glg"/>
+                <constraint firstItem="WzC-bD-fur" firstAttribute="top" secondItem="vvb-2q-W9M" secondAttribute="top" constant="10" id="wZg-Ep-fs0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="1148" y="379"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="LoginBack" width="320" height="568"/>
+    </resources>
+</document>

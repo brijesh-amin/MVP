@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tblcellatr" id="KGk-i7-Jjw" customClass="tblcellatr">
+            <rect key="frame" x="0.0" y="0.0" width="238" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="238" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ti-yD-t9Q">
+                        <rect key="frame" x="9" y="9" width="220" height="25"/>
+                        <color key="backgroundColor" red="0.96862745100000003" green="0.98823529409999999" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="II6-wg-yng">
+                        <rect key="frame" x="205" y="2" width="22" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="22" id="rlO-CK-h3i"/>
+                        </constraints>
+                        <state key="normal" image="ArrowDown"/>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="II6-wg-yng" secondAttribute="bottom" id="Gcu-IR-b6V"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="II6-wg-yng" secondAttribute="trailing" constant="3" id="H6d-lp-aPX"/>
+                    <constraint firstItem="1Ti-yD-t9Q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="1" id="J2O-7q-Q9A"/>
+                    <constraint firstItem="1Ti-yD-t9Q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="1" id="LAM-mR-Ssz"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="1Ti-yD-t9Q" secondAttribute="trailing" constant="1" id="Soa-oS-omT"/>
+                    <constraint firstItem="II6-wg-yng" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-6" id="app-I3-iwq"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="1Ti-yD-t9Q" secondAttribute="bottom" constant="1" id="olk-Fi-KPO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="lblattributename" destination="1Ti-yD-t9Q" id="YWA-BV-etv"/>
+            </connections>
+            <point key="canvasLocation" x="323" y="223"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ArrowDown" width="24" height="24"/>
+    </resources>
+</document>
