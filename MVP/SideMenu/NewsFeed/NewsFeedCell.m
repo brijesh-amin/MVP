@@ -53,7 +53,7 @@
 
     
      NewsCollectionCell *cell =(NewsCollectionCell *)[collectionView dequeueReusableCellWithReuseIdentifier:@"CollectionCell" forIndexPath:indexPath];
-       [cell setNewsFeedListing:arrListing];
+       [cell setNewsFeedListing:arrListing[indexPath.row]];
     
     return cell;
 }

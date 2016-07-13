@@ -41,11 +41,10 @@
     
 }
 
--(void)setNewsFeedListing:(NSMutableArray *)arrFeedNewsList
+-(void)setNewsFeedListing:(NSDictionary *)dict
 { 
 
     
-    for (NSMutableDictionary *dict in arrFeedNewsList) {
         
         NSString *imageName;
         
@@ -55,6 +54,6 @@
             [self.imgAsync loadImageFromStringforUserimg:imageName];
     
         
-}
+
 }
 @end
