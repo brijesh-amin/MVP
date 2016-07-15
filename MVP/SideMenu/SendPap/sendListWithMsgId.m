@@ -1,16 +1,14 @@
 //
-//  ReceivePapCell.m
+//  sendListWithMsgId.m
 //  MVP
 //
-//  Created by Darshan on 27/05/16.
+//  Created by Happy on 7/14/16.
 //  Copyright © 2016 Darshan. All rights reserved.
 //
 
-#import "ReceivePapCell.h"
-#import "StaticClass.h"
+#import "sendListWithMsgId.h"
 
-@implementation ReceivePapCell
-
+@implementation sendListWithMsgId
 //UIView
 @synthesize backView;
 
@@ -18,9 +16,7 @@
 @synthesize lblUserName;
 @synthesize lblUserComment;
 @synthesize lblUserCommentTime;
-@synthesize ivChat,ivTick;
 
-//AsyncImage
 @synthesize imgAsync;
 
 - (void)awakeFromNib {
@@ -34,10 +30,12 @@
     
     imgAsync.layer.cornerRadius = 30.0f;
     imgAsync.clipsToBounds = YES;
+    
 }
 
--(void)setReceivePapChatData:(PapChat*)objPap
+-(void)setPapChatData:(PapChat*)objPap
 {
+    
     NSString *imageName;
     
     if (objPap.img_url == nil || [objPap.img_url isEqualToString:@""]) {
@@ -49,14 +47,6 @@
     
     lblUserName.text = objPap.name;
     lblUserComment.text = objPap.item_type;
-    
-    if ([objPap.feedbackbit  isEqual: @"0"]) {
-        ivTick.hidden = NO;
-    }
-    else
-    {
-        ivTick.hidden = YES;
-    }
     
     NSArray *components = [objPap.DtStamp componentsSeparatedByString:@" "];
     NSString *time = components[1];
@@ -81,8 +71,8 @@
         lblUserCommentTime.text = [NSString stringWithFormat:@"%@ AM",strTime];
     }
     
-    
 }
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

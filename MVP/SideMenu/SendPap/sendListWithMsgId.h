@@ -1,16 +1,16 @@
 //
-//  ReceivePapCell.h
+//  sendListWithMsgId.h
 //  MVP
 //
-//  Created by Darshan on 27/05/16.
+//  Created by Happy on 7/14/16.
 //  Copyright © 2016 Darshan. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "AsyncImage.h"
 #import "PapChat.h"
+#import "AsyncImage.h"
 
-@interface ReceivePapCell : UITableViewCell
+@interface sendListWithMsgId : UITableViewCell
 
 //UIView
 @property (nonatomic , strong) IBOutlet UIView *backView;
@@ -19,12 +19,11 @@
 @property (nonatomic , strong) IBOutlet UILabel *lblUserName;
 @property (nonatomic , strong) IBOutlet UILabel *lblUserComment;
 @property (nonatomic , strong) IBOutlet UILabel *lblUserCommentTime;
-@property (strong, nonatomic) IBOutlet UIImageView *ivChat;
-@property (strong, nonatomic) IBOutlet UIImageView *ivTick;
 
 //AsyncImage
 @property (nonatomic , strong) IBOutlet AsyncImage *imgAsync;
 
--(void)setReceivePapChatData:(PapChat*)objPap;
+-(void)setPapChatData:(PapChat*)objPap;
+
 
 @end

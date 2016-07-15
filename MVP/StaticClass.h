@@ -101,6 +101,7 @@
 #define updateProfile_Url [NSString stringWithFormat:@"%@%@",Base_Url,@"updateprofile.php"]
 #define profileImg_Url [NSString stringWithFormat:@"%@%@",Base_Url,@"ProfileImage.php"]
 #define getPap_Url [NSString stringWithFormat:@"%@%@",Base_Url,@"getallpap.php"]
+#define getPapGroup_Url [NSString stringWithFormat:@"%@%@",Base_Url,@"getpapbygroup.php"]
 #define getRecievePap_Url [NSString stringWithFormat:@"%@%@",Base_Url,@"getrecievepap.php"]
 #define getFeedbackPap_Url [NSString stringWithFormat:@"%@%@",Base_Url,@"getfeedback.php"]
 #define feedbackPap_Url [NSString stringWithFormat:@"%@%@",Base_Url,@"feedbackpap.php"]

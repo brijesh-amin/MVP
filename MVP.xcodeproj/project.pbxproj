@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D457E121D3809DF00EE1012 /* ic_check_12pt_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D457E111D3809DF00EE1012 /* ic_check_12pt_2x.png */; };
+		3D457E161D380F1100EE1012 /* sendList_MsgId.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D457E141D380F1100EE1012 /* sendList_MsgId.m */; };
+		3D457E171D380F1100EE1012 /* sendList_MsgId.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D457E151D380F1100EE1012 /* sendList_MsgId.xib */; };
+		3D457E1E1D38111000EE1012 /* sendListWithMsgId.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D457E1C1D38111000EE1012 /* sendListWithMsgId.m */; };
+		3D457E1F1D38111000EE1012 /* sendListWithMsgId.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D457E1D1D38111000EE1012 /* sendListWithMsgId.xib */; };
 		7D0882B31CF577EC00B77D82 /* AttributImgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0882B21CF577EC00B77D82 /* AttributImgView.m */; };
 		7D151BF71D3149AF004E4CFE /* ArrowDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D151BF41D3149AF004E4CFE /* ArrowDown.png */; };
 		7D151BF81D3149AF004E4CFE /* ArrowDown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D151BF51D3149AF004E4CFE /* ArrowDown@2x.png */; };
@@ -222,6 +227,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3D457E111D3809DF00EE1012 /* ic_check_12pt_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_check_12pt_2x.png; sourceTree = "<group>"; };
+		3D457E131D380F1100EE1012 /* sendList_MsgId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sendList_MsgId.h; sourceTree = "<group>"; };
+		3D457E141D380F1100EE1012 /* sendList_MsgId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sendList_MsgId.m; sourceTree = "<group>"; };
+		3D457E151D380F1100EE1012 /* sendList_MsgId.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = sendList_MsgId.xib; sourceTree = "<group>"; };
+		3D457E1B1D38111000EE1012 /* sendListWithMsgId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sendListWithMsgId.h; sourceTree = "<group>"; };
+		3D457E1C1D38111000EE1012 /* sendListWithMsgId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sendListWithMsgId.m; sourceTree = "<group>"; };
+		3D457E1D1D38111000EE1012 /* sendListWithMsgId.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = sendListWithMsgId.xib; sourceTree = "<group>"; };
 		7D0882B11CF577EC00B77D82 /* AttributImgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributImgView.h; sourceTree = "<group>"; };
 		7D0882B21CF577EC00B77D82 /* AttributImgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributImgView.m; sourceTree = "<group>"; };
 		7D151BF41D3149AF004E4CFE /* ArrowDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ArrowDown.png; sourceTree = "<group>"; };
@@ -565,6 +577,12 @@
 				7D1E03A41D214D1200EBD516 /* SendPapCell.h */,
 				7D1E03A51D214D1200EBD516 /* SendPapCell.m */,
 				7D1E03A61D214D1200EBD516 /* SendPapCell.xib */,
+				3D457E131D380F1100EE1012 /* sendList_MsgId.h */,
+				3D457E141D380F1100EE1012 /* sendList_MsgId.m */,
+				3D457E151D380F1100EE1012 /* sendList_MsgId.xib */,
+				3D457E1B1D38111000EE1012 /* sendListWithMsgId.h */,
+				3D457E1C1D38111000EE1012 /* sendListWithMsgId.m */,
+				3D457E1D1D38111000EE1012 /* sendListWithMsgId.xib */,
 			);
 			name = SendPap;
 			path = MVP/SideMenu/SendPap;
@@ -1030,6 +1048,7 @@
 				7DF7C91B1CE6D47900EF8D0D /* LoginAndRegister */,
 				7DD84E7E1CE84E1F006AFD94 /* SideMenu */,
 				7DF7C8EE1CE6D3D700EF8D0D /* Main.storyboard */,
+				3D457E111D3809DF00EE1012 /* ic_check_12pt_2x.png */,
 				7D8E25B91CEB1C2A001FD10E /* MasterViewController.h */,
 				7D8E25BA1CEB1C2A001FD10E /* MasterViewController.m */,
 				7DF7C8F41CE6D3D700EF8D0D /* Assets.xcassets */,
@@ -1300,6 +1319,7 @@
 				7DB1AD681CEB7234008A0128 /* PapChatCell.xib in Resources */,
 				7D8E25D41CEB200F001FD10E /* PapChatView.xib in Resources */,
 				7D9CE9B01CECC14300CFF3BD /* SendFeedBackView.xib in Resources */,
+				3D457E121D3809DF00EE1012 /* ic_check_12pt_2x.png in Resources */,
 				7D4558081CF027E200FA8B97 /* AnalyticCollectionCell.xib in Resources */,
 				7D8E25CF1CEB1FAC001FD10E /* MyAccountView.xib in Resources */,
 				7DF7C8F81CE6D3D700EF8D0D /* LaunchScreen.storyboard in Resources */,
@@ -1314,6 +1334,7 @@
 				7DF7C92C1CE6F01300EF8D0D /* RegisterView.xib in Resources */,
 				7DB1AD721CEB7C8B008A0128 /* PapChatHomeCell.xib in Resources */,
 				7DF7C8F51CE6D3D700EF8D0D /* Assets.xcassets in Resources */,
+				3D457E1F1D38111000EE1012 /* sendListWithMsgId.xib in Resources */,
 				7DBA27301D031C7700CA65BC /* ForgotPasswordView.xib in Resources */,
 				7D8E25E01CEB268E001FD10E /* AnalyticToolView.xib in Resources */,
 				7DF091291CED859200A7F2B4 /* AnalyticsDetailsView.xib in Resources */,
@@ -1324,6 +1345,7 @@
 				7D8E25C01CEB1C5D001FD10E /* MVPSideMenu.xib in Resources */,
 				7D8E25DB1CEB25A9001FD10E /* ReceivePapView.xib in Resources */,
 				7DF7C9201CE6D7B100EF8D0D /* LoginView.xib in Resources */,
+				3D457E171D380F1100EE1012 /* sendList_MsgId.xib in Resources */,
 				7DF7C8F01CE6D3D700EF8D0D /* Main.storyboard in Resources */,
 				7DA385121CFDC95A009E905C /* SendPapChat.xib in Resources */,
 				7D1E03A81D214D1200EBD516 /* SendPapCell.xib in Resources */,
@@ -1401,6 +1423,7 @@
 				7D1E03A71D214D1200EBD516 /* SendPapCell.m in Sources */,
 				7D986E5A1CE742CB009B9AC3 /* UIProgressView+AFNetworking.m in Sources */,
 				7DB1AD6C1CEB7B94008A0128 /* PapChatHomeView.m in Sources */,
+				3D457E1E1D38111000EE1012 /* sendListWithMsgId.m in Sources */,
 				7DF7C8EA1CE6D3D700EF8D0D /* AppDelegate.m in Sources */,
 				7D45582E1CF02DF500FA8B97 /* PNChartLabel.m in Sources */,
 				7D45582C1CF02DF500FA8B97 /* PNBar.m in Sources */,
@@ -1427,6 +1450,7 @@
 				7D986E4D1CE742CB009B9AC3 /* AFHTTPSessionManager.m in Sources */,
 				7D986E551CE742CB009B9AC3 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				7D4558341CF02DF500FA8B97 /* PNLineChartDataItem.m in Sources */,
+				3D457E161D380F1100EE1012 /* sendList_MsgId.m in Sources */,
 				7DC8E6071D0AE34A00B7CAC7 /* CarbonTabSwipeNavigation.m in Sources */,
 				7D4558021CF01FE700FA8B97 /* NewsCollectionCell.m in Sources */,
 				7D986E511CE742CB009B9AC3 /* AFURLRequestSerialization.m in Sources */,

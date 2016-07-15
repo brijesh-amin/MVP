@@ -13,8 +13,9 @@
 #import "PapChat.h"
 #import "PapReceiveView.h"
 #import "SendPapChat.h"
-#import "PapChatHomeView.h"
+
 #import "AppDelegate.h"
+#import "sendList_MsgId.h"
 
 @interface PapChatView ()
 
@@ -171,9 +172,14 @@
         viewSend.BeanPapChat = objPap;
         [self.navigationController pushViewController:viewSend animated:YES];
     }else{
-        PapChatHomeView *viewPapChat = [[PapChatHomeView alloc] initWithNibName:@"PapChatHomeView" bundle:nil];
-        viewPapChat.objPapChats = objPap;
+        
+        sendList_MsgId *viewPapChat = [[sendList_MsgId alloc] initWithNibName:@"sendList_MsgId" bundle:nil];
+        viewPapChat.nextMsgId = objPap.msg_id;
         [[self navigationController] pushViewController:viewPapChat animated:YES];
+        
+        //PapChatHomeView *viewPapChat = [[PapChatHomeView alloc] initWithNibName:@"PapChatHomeView" bundle:nil];
+        //viewPapChat.objPapChats = objPap;
+        //[[self navigationController] pushViewController:viewPapChat animated:YES];
     }
 }
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath

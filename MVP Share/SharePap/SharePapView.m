@@ -12,7 +12,7 @@
 #define TypeUrl @"Type url.. Here"
 #define ItemType @"Item Type"
 #define CustomerName @"Customer Name"
-#define provideAlert @"Alert !"
+#define provideAlert @""
 #define provideFailed @"Failed !"
 #define provideCancel @"Cancel"
 #define provideOk @"Ok"

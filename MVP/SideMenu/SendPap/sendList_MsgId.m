@@ -1,48 +1,66 @@
 //
-//  SendPapView.m
+//  sendList_MsgId.m
 //  MVP
 //
-//  Created by Darshan on 27/06/16.
+//  Created by Happy on 7/14/16.
 //  Copyright © 2016 Darshan. All rights reserved.
 //
 
-#import "SendPapView.h"
-#import "SendPapCell.h"
+#import "sendList_MsgId.h"
+#import "sendListWithMsgId.h"
 #import "PapChat.h"
+#import "PapChatHomeView.h"
 #import "StaticClass.h"
 #import "AppDelegate.h"
-#import "sendList_MsgId.h"
 
-@interface SendPapView ()
+@interface sendList_MsgId ()
 
 @end
 
-@implementation SendPapView
-
-@synthesize arrSendPapList;
-@synthesize tblSendPap;
+@implementation sendList_MsgId
+@synthesize arrSendPapList2;
+@synthesize tblSendPap,nextMsgId;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.navigationItem.titleView = [SHARED_APPDELEGATE getNavigationWithTitle:@"Send Pap" fontSize:18];
+    self.navigationItem.titleView = [SHARED_APPDELEGATE getNavigationWithTitle:@"Send Pap list" fontSize:18];
+    self.navigationItem.backBarButtonItem.image = [UIImage imageNamed:@"back.png"];
+    tblSendPap.dataSource = self;
+    tblSendPap.delegate = self;
     
-    NSString *strDeviceID = [[NSUserDefaults standardUserDefaults]objectForKey:DEVICE_ID];
+    UIImage *backButtonImage = [UIImage imageNamed:@"Back"];
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [backButton setImage:backButtonImage
+                forState:UIControlStateNormal];
+    
+    backButton.frame = CGRectMake(0, 0, backButtonImage.size.width, backButtonImage.size.height);
+    
+    [backButton addTarget:self
+                   action:@selector(popViewController)
+         forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    self.navigationItem.leftBarButtonItem = backBarButtonItem;
+    
     NSString *strUserEmail = [[NSUserDefaults standardUserDefaults]objectForKey:USEREMAILID];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
     
-    [params setObject:@"1" forKey:@"from"];
-    [params setObject:strDeviceID forKey:@"device_id"];
+    //[params setObject:@"1" forKey:@"from"];
+    [params setObject:nextMsgId forKey:@"msg_id"];
     [params setObject:strUserEmail forKey:@"email"];
     
     [SHARED_APPDELEGATE showLoadingView];
     
-    arrSendPapList = [[NSMutableArray alloc] init];
+    arrSendPapList2 = [[NSMutableArray alloc] init];
+    //http://mahatmainfoware.com/iphoneAppServices/getpapbygroup.php
+    //getPapGroup_Url
     
-    [manager POST:getPap_Url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager POST:@"http://mahatmainfoware.com/iphoneAppServices/getpapbygroup.php" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         [SHARED_APPDELEGATE hideLoadingView];
         NSLog(@"ResponceLogin %@",responseObject);
@@ -65,7 +83,7 @@
             objPapChat.attribute3 = [dict objectForKey:@"attribute3"];
             objPapChat.attribute_count = [dict objectForKey:@"attribute_count"];
             
-            [arrSendPapList addObject:objPapChat];
+            [arrSendPapList2 addObject:objPapChat];
             [tblSendPap reloadData];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -76,29 +94,34 @@
     }];
 }
 
+-(void)popViewController
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 80.0f;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [arrSendPapList count];
+    return [arrSendPapList2 count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *simpleTableIdenti = @"ChatImageCell";
     
-    SendPapCell *cell = (SendPapCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdenti];
+    sendListWithMsgId *cell = (sendListWithMsgId *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdenti];
     if (cell == nil)
     {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SendPapCell" owner:self options:nil];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"sendListWithMsgId" owner:self options:nil];
         cell = [nib objectAtIndex:0];
     }
     cell.selectionStyle  = UITableViewCellSelectionStyleNone;
     
-    PapChat *objPap = [arrSendPapList objectAtIndex:indexPath.row];
+    PapChat *objPap = [arrSendPapList2 objectAtIndex:indexPath.row];
     
-    if ([arrSendPapList count] > indexPath.row) {
+    if ([arrSendPapList2 count] > indexPath.row) {
         [cell setPapChatData:objPap];
     }
     
@@ -106,17 +129,10 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    PapChat *objPap = [arrSendPapList2 objectAtIndex:indexPath.row];
     
-    
-    //PapChatHomeView *viewPapChat = [[PapChatHomeView alloc] initWithNibName:@"PapChatHomeView" bundle:nil];
-    //viewPapChat.objPapChats = objPap;
-    //[[self navigationController] pushViewController:viewPapChat animated:YES];
-    //objPapChat.msg_id
-    //viewPapChat.objPapChats = objPap;
-    
-    PapChat *objPap = [arrSendPapList objectAtIndex:indexPath.row];
-    sendList_MsgId *viewPapChat = [[sendList_MsgId alloc] initWithNibName:@"sendList_MsgId" bundle:nil];
-    viewPapChat.nextMsgId = objPap.msg_id;
+    PapChatHomeView *viewPapChat = [[PapChatHomeView alloc] initWithNibName:@"PapChatHomeView" bundle:nil];
+    viewPapChat.objPapChats = objPap;
     [[self navigationController] pushViewController:viewPapChat animated:YES];
     
 }

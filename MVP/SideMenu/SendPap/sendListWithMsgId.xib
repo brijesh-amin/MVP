@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hgo-TD-SHW" customClass="sendListWithMsgId">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hgo-TD-SHW" id="acl-fP-KFR">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zlZ-la-4mj">
+                        <rect key="frame" x="78" y="9" width="232" height="60"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ritzz Frankenstein" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6t-Fo-y1l">
+                                <rect key="frame" x="15" y="10" width="164" height="16"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDt-eA-H1a">
+                                <rect key="frame" x="15" y="30" width="189" height="16"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" red="0.52941176469999995" green="0.52941176469999995" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12:59 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O5h-9O-tFJ">
+                                <rect key="frame" x="177" y="15" width="45" height="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Chat" translatesAutoresizingMaskIntoConstraints="NO" id="Oho-hD-Mrh">
+                                <rect key="frame" x="207" y="34" width="12" height="12"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="N5S-uC-qFK"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3E-Fn-o6s" customClass="AsyncImage">
+                        <rect key="frame" x="10" y="9" width="60" height="60"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="DQj-AN-kx8"/>
+                            <constraint firstAttribute="width" constant="60" id="a2a-OM-uNk"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="zlZ-la-4mj" firstAttribute="leading" secondItem="e3E-Fn-o6s" secondAttribute="trailing" constant="8" symbolic="YES" id="1Bc-T1-obv"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="zlZ-la-4mj" secondAttribute="trailing" constant="2" id="23t-sR-COD"/>
+                    <constraint firstItem="e3E-Fn-o6s" firstAttribute="top" secondItem="zlZ-la-4mj" secondAttribute="top" id="7gL-yV-xyf"/>
+                    <constraint firstItem="e3E-Fn-o6s" firstAttribute="leading" secondItem="acl-fP-KFR" secondAttribute="leadingMargin" constant="2" id="prG-Bj-EM0"/>
+                    <constraint firstItem="e3E-Fn-o6s" firstAttribute="centerY" secondItem="acl-fP-KFR" secondAttribute="centerY" id="pud-bY-vJZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="backView" destination="zlZ-la-4mj" id="G9w-fn-p5G"/>
+                <outlet property="imgAsync" destination="e3E-Fn-o6s" id="PPV-hV-ry7"/>
+                <outlet property="lblUserComment" destination="kDt-eA-H1a" id="AQm-hg-tVX"/>
+                <outlet property="lblUserCommentTime" destination="O5h-9O-tFJ" id="NhQ-cj-djI"/>
+                <outlet property="lblUserName" destination="u6t-Fo-y1l" id="fj5-7s-PI4"/>
+            </connections>
+            <point key="canvasLocation" x="683" y="334"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Chat" width="12" height="12"/>
+    </resources>
+</document>
