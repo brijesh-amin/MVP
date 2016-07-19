@@ -79,7 +79,7 @@
                                                 <constraint firstAttribute="height" constant="30" id="cQC-VA-siV"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
-                                            <state key="normal" title="Forgot Your Password ?"/>
+                                            <state key="normal" title="Forgotten Your Password ?"/>
                                             <connections>
                                                 <action selector="onClickForgotPasswordBtn:" destination="-1" eventType="touchUpInside" id="Lrj-a8-eg0"/>
                                             </connections>
@@ -139,7 +139,7 @@
                                                 <action selector="onClickSignInBtn:" destination="-1" eventType="touchUpInside" id="kqI-Q9-lSX"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 0.01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6E-Rb-pYO">
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 0.01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6E-Rb-pYO">
                                             <rect key="frame" x="97" y="426" width="125" height="16"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="16" id="xgG-l4-rvO"/>

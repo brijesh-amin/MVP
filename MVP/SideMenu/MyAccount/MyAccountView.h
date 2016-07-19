@@ -24,6 +24,8 @@
 
 //UITextField
 @property (nonatomic , strong) IBOutlet UITextField *txtName;
+@property (strong, nonatomic) IBOutlet UITextField *txtLastname;
+
 @property (nonatomic , strong) IBOutlet UITextField *txtCreatePass;
 @property (nonatomic , strong) IBOutlet UITextField *txtConfirmPass;
 @property (nonatomic , strong) IBOutlet UITextField *txtDay;
@@ -31,6 +33,7 @@
 @property (nonatomic , strong) IBOutlet UITextField *txtyear;
 
 @property (strong, nonatomic) IBOutlet UITextField *txtMobile;
+@property (strong, nonatomic) IBOutlet UITextField *txtcountrycode;
 
 
 //Button

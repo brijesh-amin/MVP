@@ -30,6 +30,11 @@
 @synthesize txtyear;
 @synthesize txtMobile;
 
+@synthesize txtlastname;
+@synthesize txtcountrycode;
+
+
+
 
 //Button
 @synthesize btnLocation;
@@ -65,12 +70,21 @@ AppDelegate *appDelegateRegister;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    txtName.attributedPlaceholder = [[NSAttributedString alloc] initWithString:Name attributes:@{NSForegroundColorAttributeName: [UIColor blackColor]}];
+    txtName.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Firstname" attributes:@{NSForegroundColorAttributeName: [UIColor blackColor]}];
     txtName.leftView = [SHARED_APPDELEGATE getTextFieldRightAndLeftView];
     txtName.rightView = [SHARED_APPDELEGATE getTextFieldRightAndLeftView];
     txtName.leftViewMode = UITextFieldViewModeAlways;
     txtName.rightViewMode = UITextFieldViewModeAlways;
     txtName.layer.cornerRadius = 15.0;
+    
+    
+    txtlastname.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Lastname" attributes:@{NSForegroundColorAttributeName: [UIColor blackColor]}];
+    txtlastname.leftView = [SHARED_APPDELEGATE getTextFieldRightAndLeftView];
+    txtlastname.rightView = [SHARED_APPDELEGATE getTextFieldRightAndLeftView];
+    txtlastname.leftViewMode = UITextFieldViewModeAlways;
+    txtlastname.rightViewMode = UITextFieldViewModeAlways;
+    txtlastname.layer.cornerRadius = 15.0;
+
     
     txtEmailID.attributedPlaceholder = [[NSAttributedString alloc] initWithString:EMailID attributes:@{NSForegroundColorAttributeName: [UIColor blackColor]}];
     txtEmailID.leftView = [SHARED_APPDELEGATE getTextFieldRightAndLeftView];
@@ -101,6 +115,12 @@ AppDelegate *appDelegateRegister;
     txtMobile.layer.cornerRadius = 15.0;
 
     
+    txtcountrycode.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"CC" attributes:@{NSForegroundColorAttributeName: [UIColor blackColor]}];
+    txtcountrycode.leftView = [SHARED_APPDELEGATE getTextFieldRightAndLeftView];
+    txtcountrycode.rightView = [SHARED_APPDELEGATE getTextFieldRightAndLeftView];
+    txtcountrycode.leftViewMode = UITextFieldViewModeAlways;
+    txtcountrycode.rightViewMode = UITextFieldViewModeAlways;
+    txtcountrycode.layer.cornerRadius = 15.0;
     
     txtMonth.attributedPlaceholder = [[NSAttributedString alloc] initWithString:MM attributes:@{NSForegroundColorAttributeName: [UIColor blackColor]}];
     txtMonth.leftView = [SHARED_APPDELEGATE getTextFieldRightAndLeftView];
@@ -545,8 +565,11 @@ AppDelegate *appDelegateRegister;
             }
             
             [params setObject:txtName.text forKey:@"user_name"];
+            [params setObject:txtlastname.text forKey:@"lname"];
             [params setObject:txtEmailID.text forKey:@"email"];
             [params setObject:txtConfirmPassword.text forKey:@"password"];
+            
+            [params setObject:txtcountrycode.text forKey:@"cc"];
             [params setObject:txtMobile.text forKey:@"Mobile"];
             [params setObject:@"London" forKey:@"location"];
             [params setObject:strDate forKey:@"bdate"];
@@ -593,8 +616,13 @@ AppDelegate *appDelegateRegister;
             NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
             
             [params setObject:txtName.text forKey:@"user_name"];
+             [params setObject:txtlastname.text forKey:@"lname"];
             [params setObject:txtEmailID.text forKey:@"email"];
+            
             [params setObject:txtConfirmPassword.text forKey:@"password"];
+            [params setObject:txtcountrycode.text forKey:@"cc"];
+            [params setObject:txtMobile.text forKey:@"Mobile"];
+            
             [params setObject:@"Rajkot" forKey:@"location"];
             [params setObject:strDate forKey:@"bdate"];
             [params setObject:@"Female" forKey:@"gender"];

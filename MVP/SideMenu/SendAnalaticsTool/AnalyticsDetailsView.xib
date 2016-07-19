@@ -19,7 +19,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginBack" translatesAutoresizingMaskIntoConstraints="NO" id="Noc-7I-sqR">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="RKx-fo-qlX">
+                <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="RKx-fo-qlX">
                     <rect key="frame" x="10" y="40" width="300" height="29"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -35,6 +35,12 @@
                         <action selector="onClickLoginSignupSegment:" destination="-1" eventType="valueChanged" id="Nqb-UO-zGp"/>
                     </connections>
                 </segmentedControl>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Page Under Construction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BH4-bO-JHd">
+                    <rect key="frame" x="63" y="274" width="194" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -42,6 +48,8 @@
                 <constraint firstAttribute="trailing" secondItem="RKx-fo-qlX" secondAttribute="trailing" constant="10" id="QLC-2D-i4o"/>
                 <constraint firstItem="RKx-fo-qlX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="S0W-aO-eGr"/>
                 <constraint firstAttribute="trailing" secondItem="Noc-7I-sqR" secondAttribute="trailing" id="WeI-3z-44N"/>
+                <constraint firstItem="BH4-bO-JHd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XHa-Te-MMA"/>
+                <constraint firstItem="BH4-bO-JHd" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="fI4-Kz-Hg0"/>
                 <constraint firstItem="RKx-fo-qlX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="fmm-KL-ZbF"/>
                 <constraint firstItem="Noc-7I-sqR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="v55-WE-L8F"/>
                 <constraint firstAttribute="bottom" secondItem="Noc-7I-sqR" secondAttribute="bottom" id="x1I-vR-A0l"/>

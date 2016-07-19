@@ -29,6 +29,10 @@
 @property (nonatomic , strong) IBOutlet UITextField *txtyear;
 
 @property (strong, nonatomic) IBOutlet UITextField *txtMobile;
+@property (strong, nonatomic) IBOutlet UITextField *txtlastname;
+
+@property (strong, nonatomic) IBOutlet UITextField *txtcountrycode;
+
 
 
 //Button

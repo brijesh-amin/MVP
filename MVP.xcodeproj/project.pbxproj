@@ -186,6 +186,8 @@
 		CF2461441D33DB9200CFE32D /* icon-96.png in Resources */ = {isa = PBXBuildFile; fileRef = CF24613F1D33DB9200CFE32D /* icon-96.png */; };
 		CF7920811D30C7F90016DFC5 /* tblcellatr.m in Sources */ = {isa = PBXBuildFile; fileRef = CF79207F1D30C7F90016DFC5 /* tblcellatr.m */; };
 		CF7920821D30C7F90016DFC5 /* tblcellatr.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF7920801D30C7F90016DFC5 /* tblcellatr.xib */; };
+		CF87D23B1D3B60CE008F1C90 /* setprofilepic.png in Resources */ = {isa = PBXBuildFile; fileRef = CF87D23A1D3B60CE008F1C90 /* setprofilepic.png */; };
+		CF87D23D1D3B6137008F1C90 /* setprofile.png in Resources */ = {isa = PBXBuildFile; fileRef = CF87D23C1D3B6137008F1C90 /* setprofile.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -534,6 +536,8 @@
 		CF79207E1D30C7F90016DFC5 /* tblcellatr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tblcellatr.h; sourceTree = "<group>"; };
 		CF79207F1D30C7F90016DFC5 /* tblcellatr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tblcellatr.m; sourceTree = "<group>"; };
 		CF7920801D30C7F90016DFC5 /* tblcellatr.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = tblcellatr.xib; sourceTree = "<group>"; };
+		CF87D23A1D3B60CE008F1C90 /* setprofilepic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setprofilepic.png; sourceTree = "<group>"; };
+		CF87D23C1D3B6137008F1C90 /* setprofile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setprofile.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -650,6 +654,8 @@
 		7D8E25C61CEB1F87001FD10E /* MyAccount */ = {
 			isa = PBXGroup;
 			children = (
+				CF87D23C1D3B6137008F1C90 /* setprofile.png */,
+				CF87D23A1D3B60CE008F1C90 /* setprofilepic.png */,
 				7D8E25CB1CEB1FAC001FD10E /* MyAccountView.h */,
 				7D8E25CC1CEB1FAC001FD10E /* MyAccountView.m */,
 				7D8E25CD1CEB1FAC001FD10E /* MyAccountView.xib */,
@@ -1327,8 +1333,10 @@
 				7DD2E51F1CF8970900BEFCA8 /* ReceivePapCell.xib in Resources */,
 				7DC8E5FB1D0AD41C00B7CAC7 /* ReceivePap.xib in Resources */,
 				7D986E611CE75349009B9AC3 /* SelectedView.xib in Resources */,
+				CF87D23D1D3B6137008F1C90 /* setprofile.png in Resources */,
 				7D1E039E1D214CDC00EBD516 /* SendPapView.xib in Resources */,
 				7D9CE9BA1CECCB1A00CFF3BD /* AnalyticToolCell.xib in Resources */,
+				CF87D23B1D3B60CE008F1C90 /* setprofilepic.png in Resources */,
 				7D8E25B61CEB1B43001FD10E /* NewsFeedCell.xib in Resources */,
 				7DD2E5271CF89DFF00BEFCA8 /* MLKMenuCell.xib in Resources */,
 				7DF7C92C1CE6F01300EF8D0D /* RegisterView.xib in Resources */,

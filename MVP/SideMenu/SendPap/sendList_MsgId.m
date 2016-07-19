@@ -25,7 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.navigationItem.titleView = [SHARED_APPDELEGATE getNavigationWithTitle:@"Send Pap list" fontSize:18];
+    self.navigationItem.titleView = [SHARED_APPDELEGATE getNavigationWithTitle:@"Pap list" fontSize:18];
     self.navigationItem.backBarButtonItem.image = [UIImage imageNamed:@"back.png"];
     tblSendPap.dataSource = self;
     tblSendPap.delegate = self;

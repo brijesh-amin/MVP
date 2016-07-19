@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -26,7 +26,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXm-3I-bv0">
-                    <rect key="frame" x="5" y="48" width="310" height="364"/>
+                    <rect key="frame" x="5" y="107" width="310" height="364"/>
                     <subviews>
                         <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nF-bc-emF">
                             <rect key="frame" x="0.0" y="0.0" width="310" height="364"/>
@@ -85,10 +85,10 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UC-hJ-mBp">
-                    <rect key="frame" x="110" y="426" width="100" height="30"/>
+                    <rect key="frame" x="98" y="52" width="125" height="30"/>
                     <color key="backgroundColor" red="0.79215686269999996" green="0.71372549019999998" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="100" id="Ayq-Ev-j5P"/>
+                        <constraint firstAttribute="width" constant="125" id="Ayq-Ev-j5P"/>
                         <constraint firstAttribute="height" constant="30" id="ZnU-CA-cik"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
@@ -105,11 +105,11 @@
             <constraints>
                 <constraint firstItem="N2X-tO-DAO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="COi-me-avt"/>
                 <constraint firstItem="cXm-3I-bv0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JNt-W5-RgQ"/>
-                <constraint firstItem="cXm-3I-bv0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="48" id="OgQ-wZ-7yv"/>
-                <constraint firstItem="6UC-hJ-mBp" firstAttribute="top" secondItem="cXm-3I-bv0" secondAttribute="bottom" constant="14" id="aBh-0Q-3Ii"/>
-                <constraint firstItem="6UC-hJ-mBp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="coc-EB-66U"/>
+                <constraint firstItem="cXm-3I-bv0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="107" id="OgQ-wZ-7yv"/>
+                <constraint firstItem="6UC-hJ-mBp" firstAttribute="centerX" secondItem="cXm-3I-bv0" secondAttribute="centerX" constant="0.5" id="a6N-eq-ztn"/>
                 <constraint firstAttribute="bottom" secondItem="N2X-tO-DAO" secondAttribute="bottom" id="nRB-Im-sBg"/>
                 <constraint firstItem="N2X-tO-DAO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nc2-Q2-1Cr"/>
+                <constraint firstItem="cXm-3I-bv0" firstAttribute="top" secondItem="6UC-hJ-mBp" secondAttribute="bottom" constant="25" id="pSC-xe-YG9"/>
                 <constraint firstAttribute="trailing" secondItem="N2X-tO-DAO" secondAttribute="trailing" id="ycL-wl-7Uj"/>
             </constraints>
             <point key="canvasLocation" x="2175" y="577"/>

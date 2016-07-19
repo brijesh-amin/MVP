@@ -23,7 +23,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.navigationItem.titleView = [SHARED_APPDELEGATE getNavigationWithTitle:@"Analytic Tool" fontSize:18];
+    self.navigationItem.titleView = [SHARED_APPDELEGATE getNavigationWithTitle:@"Analytics Tool" fontSize:18];
     
     //anlytics_Url
     

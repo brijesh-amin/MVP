@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MVP/SideMenu/MyAccount/MyAccountView.m"
-            timestampString = "489916228.469751"
+            timestampString = "490445310.857222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "438"
-            endingLineNumber = "438"
+            startingLineNumber = "465"
+            endingLineNumber = "465"
             landmarkName = "-textFieldDidBeginEditing:"
             landmarkType = "5">
          </BreakpointContent>
@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MVP/SideMenu/MyAccount/MyAccountView.m"
-            timestampString = "489916228.469751"
+            timestampString = "490445310.857222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "789"
-            endingLineNumber = "789"
+            startingLineNumber = "823"
+            endingLineNumber = "823"
             landmarkName = "-onClickSaveBtn:"
             landmarkType = "5">
          </BreakpointContent>
@@ -234,23 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MVP/SideMenu/MyAccount/MyAccountView.m"
-            timestampString = "489916228.469751"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "715"
-            endingLineNumber = "715"
-            landmarkName = "-onClickSaveBtn:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MVP/SideMenu/MyAccount/MyAccountView.m"
-            timestampString = "489916228.469751"
+            timestampString = "490445310.857222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "745"
@@ -266,11 +250,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MVP/SideMenu/MyAccount/MyAccountView.m"
-            timestampString = "489916228.469751"
+            timestampString = "490445310.857222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "268"
-            endingLineNumber = "268"
+            startingLineNumber = "779"
+            endingLineNumber = "779"
+            landmarkName = "-onClickSaveBtn:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MVP/SideMenu/MyAccount/MyAccountView.m"
+            timestampString = "490445310.857222"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "289"
+            endingLineNumber = "289"
             landmarkName = "-onClickChangePicBtn:"
             landmarkType = "5">
          </BreakpointContent>
@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MVP/SideMenu/MyAccount/MyAccountView.m"
-            timestampString = "489916228.469751"
+            timestampString = "490445310.857222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "344"
-            endingLineNumber = "344"
+            startingLineNumber = "365"
+            endingLineNumber = "365"
             landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
             landmarkType = "5">
          </BreakpointContent>
@@ -298,11 +298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MVP/SideMenu/MyAccount/MyAccountView.m"
-            timestampString = "489916228.469751"
+            timestampString = "490445310.857222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "758"
-            endingLineNumber = "758"
+            startingLineNumber = "792"
+            endingLineNumber = "792"
             landmarkName = "-onClickSaveBtn:"
             landmarkType = "5">
          </BreakpointContent>
@@ -314,11 +314,89 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MVP/SideMenu/MyAccount/MyAccountView.m"
-            timestampString = "489916228.469751"
+            timestampString = "490445310.857222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "763"
-            endingLineNumber = "763"
+            startingLineNumber = "797"
+            endingLineNumber = "797"
+            landmarkName = "-onClickSaveBtn:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__32-[MyAccountView onClickSaveBtn:]_block_invoke"
+                  moduleName = "MVP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/codewing/Downloads/MVP-master%2017%207%202/MVP/SideMenu/MyAccount/MyAccountView.m"
+                  timestampString = "490626987.408229"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "797"
+                  endingLineNumber = "797"
+                  offsetFromSymbolStart = "482">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_.423"
+                  moduleName = "MVP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/codewing/Downloads/MVP-master%2017%207%202/MVP/SideMenu/MyAccount/MyAccountView.m"
+                  timestampString = "490626987.408319"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "797"
+                  endingLineNumber = "797"
+                  offsetFromSymbolStart = "51">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_.424"
+                  moduleName = "MVP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/codewing/Downloads/MVP-master%2017%207%202/MVP/SideMenu/MyAccount/MyAccountView.m"
+                  timestampString = "490626987.4084"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "797"
+                  endingLineNumber = "797"
+                  offsetFromSymbolStart = "29">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__32-[MyAccountView onClickSaveBtn:]_block_invoke.426"
+                  moduleName = "MVP"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/codewing/Downloads/MVP-master%2017%207%202/MVP/SideMenu/MyAccount/MyAccountView.m"
+                  timestampString = "490626987.408476"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "799"
+                  endingLineNumber = "799"
+                  offsetFromSymbolStart = "75">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MVP/SideMenu/MyAccount/MyAccountView.m"
+            timestampString = "490445310.857222"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "799"
+            endingLineNumber = "799"
             landmarkName = "-onClickSaveBtn:"
             landmarkType = "5">
          </BreakpointContent>
@@ -330,11 +408,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MVP/SideMenu/MyAccount/MyAccountView.m"
-            timestampString = "489916228.469751"
+            timestampString = "490445310.857222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "765"
-            endingLineNumber = "765"
+            startingLineNumber = "793"
+            endingLineNumber = "793"
             landmarkName = "-onClickSaveBtn:"
             landmarkType = "5">
          </BreakpointContent>
@@ -346,27 +424,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MVP/SideMenu/MyAccount/MyAccountView.m"
-            timestampString = "489916228.469751"
+            timestampString = "490445310.857222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "759"
-            endingLineNumber = "759"
-            landmarkName = "-onClickSaveBtn:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MVP/SideMenu/MyAccount/MyAccountView.m"
-            timestampString = "489916228.469751"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "767"
-            endingLineNumber = "767"
+            startingLineNumber = "801"
+            endingLineNumber = "801"
             landmarkName = "-onClickSaveBtn:"
             landmarkType = "5">
          </BreakpointContent>
@@ -378,11 +440,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MVP/SideMenu/MyAccount/MyAccountView.m"
-            timestampString = "489916228.469751"
+            timestampString = "490445310.857222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "385"
-            endingLineNumber = "385"
+            startingLineNumber = "406"
+            endingLineNumber = "406"
             landmarkName = "-imagePickerController:didFinishPickingMediaWithInfo:"
             landmarkType = "5">
             <Locations>
@@ -426,11 +488,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MVP/SideMenu/MyAccount/MyAccountView.m"
-            timestampString = "489918732.696902"
+            timestampString = "490445310.857222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "802"
-            endingLineNumber = "802"
+            startingLineNumber = "839"
+            endingLineNumber = "839"
             landmarkName = "-onClickSaveBtn:"
             landmarkType = "5">
          </BreakpointContent>
@@ -442,11 +504,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MVP/SideMenu/MyAccount/MyAccountView.m"
-            timestampString = "489918818.796633"
+            timestampString = "490445310.857222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "805"
-            endingLineNumber = "805"
+            startingLineNumber = "842"
+            endingLineNumber = "842"
             landmarkName = "-onClickSaveBtn:"
             landmarkType = "5">
          </BreakpointContent>
@@ -458,11 +520,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MVP/SideMenu/MyAccount/MyAccountView.m"
-            timestampString = "489919233.814962"
+            timestampString = "490445310.857222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "499"
-            endingLineNumber = "499"
+            startingLineNumber = "529"
+            endingLineNumber = "529"
             landmarkName = "-onClickFemalBtn:"
             landmarkType = "5">
          </BreakpointContent>
@@ -474,11 +536,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MVP/SideMenu/MyAccount/MyAccountView.m"
-            timestampString = "489919237.663111"
+            timestampString = "490445310.857222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "473"
-            endingLineNumber = "473"
+            startingLineNumber = "503"
+            endingLineNumber = "503"
             landmarkName = "-onClickMaleBtn:"
             landmarkType = "5">
          </BreakpointContent>
@@ -490,11 +552,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MVP/SideMenu/MyAccount/MyAccountView.m"
-            timestampString = "489919356.876211"
+            timestampString = "490445310.857222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "693"
-            endingLineNumber = "693"
+            startingLineNumber = "723"
+            endingLineNumber = "723"
             landmarkName = "-onClickSaveBtn:"
             landmarkType = "5">
          </BreakpointContent>
@@ -506,11 +568,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MVP/SideMenu/MyAccount/MyAccountView.m"
-            timestampString = "489919359.03636"
+            timestampString = "490445310.857222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "707"
-            endingLineNumber = "707"
+            startingLineNumber = "737"
+            endingLineNumber = "737"
             landmarkName = "-onClickSaveBtn:"
             landmarkType = "5">
          </BreakpointContent>
@@ -522,11 +584,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MVP/SideMenu/MyAccount/MyAccountView.m"
-            timestampString = "489919363.204611"
+            timestampString = "490445310.857222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "708"
-            endingLineNumber = "708"
+            startingLineNumber = "738"
+            endingLineNumber = "738"
             landmarkName = "-onClickSaveBtn:"
             landmarkType = "5">
          </BreakpointContent>
@@ -538,11 +600,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MVP/SideMenu/MyAccount/MyAccountView.m"
-            timestampString = "489919372.965076"
+            timestampString = "490445310.857222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "770"
-            endingLineNumber = "770"
+            startingLineNumber = "804"
+            endingLineNumber = "804"
             landmarkName = "-onClickSaveBtn:"
             landmarkType = "5">
          </BreakpointContent>
@@ -554,11 +616,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MVP/LoginAndRegister/Register/RegisterView.m"
-            timestampString = "489920744.179414"
+            timestampString = "490445310.857222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "512"
-            endingLineNumber = "512"
+            startingLineNumber = "532"
+            endingLineNumber = "532"
             landmarkName = "-onClickSubmitBtn:"
             landmarkType = "5">
          </BreakpointContent>
@@ -570,11 +632,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MVP/LoginAndRegister/Register/RegisterView.m"
-            timestampString = "489920744.179414"
+            timestampString = "490445310.857222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "553"
-            endingLineNumber = "553"
+            startingLineNumber = "576"
+            endingLineNumber = "576"
             landmarkName = "-onClickSubmitBtn:"
             landmarkType = "5">
          </BreakpointContent>
@@ -586,11 +648,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MVP/LoginAndRegister/Register/RegisterView.m"
-            timestampString = "489920744.179414"
+            timestampString = "490445310.857222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "538"
-            endingLineNumber = "538"
+            startingLineNumber = "558"
+            endingLineNumber = "558"
             landmarkName = "-onClickSubmitBtn:"
             landmarkType = "5">
          </BreakpointContent>

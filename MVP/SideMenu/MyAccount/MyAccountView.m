@@ -29,6 +29,9 @@
 @synthesize txtyear;
 @synthesize txtMobile;
 
+@synthesize txtLastname;
+@synthesize txtcountrycode;
+
 
 //Button
 @synthesize btnLocation;
@@ -65,7 +68,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.navigationItem.titleView = [SHARED_APPDELEGATE getNavigationWithTitle:@"MyAccount" fontSize:18];
+    self.navigationItem.titleView = [SHARED_APPDELEGATE getNavigationWithTitle:@"My Profile" fontSize:18];
     
     imgProfilePic.layer.cornerRadius = 65.0f;
     imgProfilePic.clipsToBounds = YES;
@@ -104,7 +107,9 @@
         txtDay.text = strDay;
         txtMonth.text = strMonth;
         txtyear.text = strYear;
-        
+        // have to change
+        txtLastname.text = [dict objectForKey:@"lname"];
+         txtcountrycode.text = [dict objectForKey:@"cc"];
         NSString *strGender = [dict objectForKey:@"Gender"];
         
         txtMobile.text = [dict objectForKey:@"mobile"];
@@ -179,6 +184,14 @@
     txtName.rightViewMode = UITextFieldViewModeAlways;
     txtName.layer.cornerRadius = 15.0;
     
+    txtLastname.attributedPlaceholder = [[NSAttributedString alloc] initWithString:Name attributes:@{NSForegroundColorAttributeName: [UIColor blackColor]}];
+    txtLastname.leftView = [SHARED_APPDELEGATE getTextFieldRightAndLeftView];
+    txtLastname.rightView = [SHARED_APPDELEGATE getTextFieldRightAndLeftView];
+    txtLastname.leftViewMode = UITextFieldViewModeAlways;
+    txtLastname.rightViewMode = UITextFieldViewModeAlways;
+    txtLastname.layer.cornerRadius = 15.0;
+
+    
     txtCreatePass.attributedPlaceholder = [[NSAttributedString alloc] initWithString:CreatePassword attributes:@{NSForegroundColorAttributeName: [UIColor blackColor]}];
     txtCreatePass.leftView = [SHARED_APPDELEGATE getTextFieldRightAndLeftView];
     txtCreatePass.rightView = [SHARED_APPDELEGATE getTextFieldRightAndLeftView];
@@ -215,6 +228,14 @@
     txtyear.leftViewMode = UITextFieldViewModeAlways;
     txtyear.rightViewMode = UITextFieldViewModeAlways;
     txtyear.layer.cornerRadius = 15.0;
+    
+    txtcountrycode.attributedPlaceholder = [[NSAttributedString alloc] initWithString:Name attributes:@{NSForegroundColorAttributeName: [UIColor blackColor]}];
+    txtcountrycode.leftView = [SHARED_APPDELEGATE getTextFieldRightAndLeftView];
+    txtcountrycode.rightView = [SHARED_APPDELEGATE getTextFieldRightAndLeftView];
+    txtcountrycode.leftViewMode = UITextFieldViewModeAlways;
+    txtcountrycode.rightViewMode = UITextFieldViewModeAlways;
+    txtcountrycode.layer.cornerRadius = 15.0;
+    
     
     txtMobile.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Mobile" attributes:@{NSForegroundColorAttributeName: [UIColor blackColor]}];
     txtMobile.leftView = [SHARED_APPDELEGATE getTextFieldRightAndLeftView];
@@ -403,6 +424,9 @@
     if([txtName isFirstResponder]){
         [txtName resignFirstResponder];
     }
+    if([txtLastname isFirstResponder]){
+        [txtLastname resignFirstResponder];
+    }
 }
 
 #pragma mark -
@@ -433,12 +457,18 @@
     
     if (textField == txtName) {
         point = CGPointMake(0, 0);
-    }else if(textField == txtCreatePass){
+    }else if(textField == txtLastname){
+        point = CGPointMake(0, 0);
+    }
+    else if(textField == txtCreatePass){
         point = CGPointMake(0, 80);
     }else if (textField == txtConfirmPass){
         point = CGPointMake(0, 135);
     }
 //    /* make change here if require */
+    else if (textField == txtcountrycode){
+        point = CGPointMake(0, 150);
+    }
     else if (textField == txtMobile){
         point = CGPointMake(0, 150);
     }
@@ -734,9 +764,13 @@
             NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
             
             [params setObject:txtName.text forKey:@"Name"];
+            // new addedd
+            [params setObject:txtLastname.text forKey:@"lname"];
              [params setObject:stremail forKey:@"email"];
           //  [params setObject:strDeviceID forKey:@"device_id"];
             [params setObject:txtConfirmPass.text forKey:@"password"];
+            // new added
+             [params setObject:txtcountrycode.text forKey:@"cc"];
             [params setObject:txtMobile.text forKey:@"Mobile"];
             [params setObject:@"London" forKey:@"location"];
             //[params setObject:_strImgProfilePic forKey:@"image_url"];
@@ -793,9 +827,12 @@
            // [params setObject:imageData withFileName:newDateStr andContentType:@"image/jpeg" forKey:@"image"];
             
                 [params setObject:txtName.text forKey:@"Name"];
+             [params setObject:txtName.text forKey:@"lname"];
                [params setObject:stremail forKey:@"email"];
                 [params setObject:strDeviceID forKey:@"device_id"];
                 [params setObject:txtConfirmPass.text forKey:@"password"];
+                [params setObject:txtMobile.text forKey:@"Mobile"];
+            [params setObject:txtcountrycode.text forKey:@"cc"];
                 [params setObject:@"Rajkot" forKey:@"location"];
                 [params setObject:strDate forKey:@"bdate"];
                 [params setObject:@"Female" forKey:@"gender"];
