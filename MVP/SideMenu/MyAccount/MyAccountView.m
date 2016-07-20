@@ -229,7 +229,7 @@
     txtyear.rightViewMode = UITextFieldViewModeAlways;
     txtyear.layer.cornerRadius = 15.0;
     
-    txtcountrycode.attributedPlaceholder = [[NSAttributedString alloc] initWithString:Name attributes:@{NSForegroundColorAttributeName: [UIColor blackColor]}];
+    txtcountrycode.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"CC" attributes:@{NSForegroundColorAttributeName: [UIColor blackColor]}];
     txtcountrycode.leftView = [SHARED_APPDELEGATE getTextFieldRightAndLeftView];
     txtcountrycode.rightView = [SHARED_APPDELEGATE getTextFieldRightAndLeftView];
     txtcountrycode.leftViewMode = UITextFieldViewModeAlways;

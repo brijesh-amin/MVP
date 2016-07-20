@@ -321,68 +321,6 @@
             endingLineNumber = "797"
             landmarkName = "-onClickSaveBtn:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__32-[MyAccountView onClickSaveBtn:]_block_invoke"
-                  moduleName = "MVP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/codewing/Downloads/MVP-master%2017%207%202/MVP/SideMenu/MyAccount/MyAccountView.m"
-                  timestampString = "490626987.408229"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "797"
-                  endingLineNumber = "797"
-                  offsetFromSymbolStart = "482">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__copy_helper_block_.423"
-                  moduleName = "MVP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/codewing/Downloads/MVP-master%2017%207%202/MVP/SideMenu/MyAccount/MyAccountView.m"
-                  timestampString = "490626987.408319"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "797"
-                  endingLineNumber = "797"
-                  offsetFromSymbolStart = "51">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.424"
-                  moduleName = "MVP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/codewing/Downloads/MVP-master%2017%207%202/MVP/SideMenu/MyAccount/MyAccountView.m"
-                  timestampString = "490626987.4084"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "797"
-                  endingLineNumber = "797"
-                  offsetFromSymbolStart = "29">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__32-[MyAccountView onClickSaveBtn:]_block_invoke.426"
-                  moduleName = "MVP"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/codewing/Downloads/MVP-master%2017%207%202/MVP/SideMenu/MyAccount/MyAccountView.m"
-                  timestampString = "490626987.408476"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "799"
-                  endingLineNumber = "799"
-                  offsetFromSymbolStart = "75">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

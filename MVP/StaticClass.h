@@ -45,7 +45,7 @@
 //Login
 #define UserName @"Username"
 #define Password @"Password"
-#define Email_ID @"Email_ID"
+#define Email_ID @"Email"
 #define provideUserName @"Please Enter UserName"
 #define providePassword @"Please Enter password"
 

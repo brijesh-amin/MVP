@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -22,32 +22,39 @@
                     <rect key="frame" x="0.0" y="0.0" width="280" height="568"/>
                 </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lGk-Ek-gT2">
-                    <rect key="frame" x="0.0" y="0.0" width="280" height="568"/>
+                    <rect key="frame" x="0.0" y="140" width="280" height="419"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="5T9-kt-Psj"/>
                         <outlet property="delegate" destination="-1" id="kL3-wU-oFM"/>
                     </connections>
                 </tableView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="180.png" translatesAutoresizingMaskIntoConstraints="NO" id="XXG-je-1tz">
+                    <rect key="frame" x="90" y="35" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="lbe-KS-oiU"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="yWJ-fj-l5b" secondAttribute="bottom" id="3za-Ko-Wtg"/>
                 <constraint firstAttribute="trailing" secondItem="lGk-Ek-gT2" secondAttribute="trailing" id="6aQ-ae-RLn"/>
-                <constraint firstAttribute="bottom" secondItem="lGk-Ek-gT2" secondAttribute="bottom" id="6s4-PX-W0I"/>
                 <constraint firstAttribute="trailing" secondItem="lGk-Ek-gT2" secondAttribute="trailing" id="Aht-LL-yKb"/>
                 <constraint firstItem="yWJ-fj-l5b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DnS-n0-HUw"/>
+                <constraint firstItem="XXG-je-1tz" firstAttribute="centerX" secondItem="lGk-Ek-gT2" secondAttribute="centerX" id="NWb-Ls-f9d"/>
                 <constraint firstAttribute="bottom" secondItem="yWJ-fj-l5b" secondAttribute="bottom" id="NgL-eQ-i3b"/>
                 <constraint firstItem="lGk-Ek-gT2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Rgd-DN-VEg"/>
                 <constraint firstItem="yWJ-fj-l5b" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TID-0M-reH"/>
-                <constraint firstAttribute="bottom" secondItem="lGk-Ek-gT2" secondAttribute="bottom" id="Vr1-fa-uC7"/>
+                <constraint firstAttribute="bottom" secondItem="lGk-Ek-gT2" secondAttribute="bottom" constant="9" id="Vr1-fa-uC7"/>
+                <constraint firstItem="lGk-Ek-gT2" firstAttribute="top" secondItem="XXG-je-1tz" secondAttribute="bottom" constant="5" id="XOp-Aj-h5A"/>
                 <constraint firstItem="lGk-Ek-gT2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="d0k-Lg-NLc"/>
-                <constraint firstItem="lGk-Ek-gT2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nJ0-mv-ut3"/>
+                <constraint firstItem="XXG-je-1tz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="dAa-Uf-w4U"/>
                 <constraint firstAttribute="trailing" secondItem="yWJ-fj-l5b" secondAttribute="trailing" id="p7x-Mt-Ykb"/>
                 <constraint firstItem="yWJ-fj-l5b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rOp-AD-StC"/>
+                <constraint firstItem="XXG-je-1tz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="35" id="riD-wZ-TwR"/>
                 <constraint firstAttribute="trailing" secondItem="yWJ-fj-l5b" secondAttribute="trailing" id="s5g-lj-A31"/>
                 <constraint firstItem="yWJ-fj-l5b" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="w1u-Nh-eYM"/>
-                <constraint firstItem="lGk-Ek-gT2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xGg-Te-1a1"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="766" y="466"/>
@@ -89,6 +96,7 @@
         </view>
     </objects>
     <resources>
+        <image name="180.png" width="180" height="180"/>
         <image name="LoginBack" width="320" height="568"/>
     </resources>
 </document>

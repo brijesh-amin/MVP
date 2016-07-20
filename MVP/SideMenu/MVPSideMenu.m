@@ -44,15 +44,16 @@
     arrSideMenu = [[NSMutableArray alloc] init];
     
     [arrSideMenu addObject:[self getDictfromTitle:@"News Feed" andImageIco:@"UserName"]];
-    [arrSideMenu addObject:[self getDictfromTitle:@"My Account" andImageIco:@"UserName"]];
+    [arrSideMenu addObject:[self getDictfromTitle:@"My Profile" andImageIco:@"UserName"]];
     [arrSideMenu addObject:[self getDictfromTitle:@"Pap Chat" andImageIco:@"UserName"]];
     [arrSideMenu addObject:[self getDictfromTitle:@"Received Pap" andImageIco:@"UserName"]];
     [arrSideMenu addObject:[self getDictfromTitle:@"Sent Pap" andImageIco:@"UserName"]];
-    [arrSideMenu addObject:[self getDictfromTitle:@"Analytic Tool" andImageIco:@"UserName"]];
+    [arrSideMenu addObject:[self getDictfromTitle:@"Analytics Tool" andImageIco:@"UserName"]];
     [arrSideMenu addObject:[self getDictfromTitle:@"LogOut" andImageIco:@"UserName"]];
     
     tblSideMenu.tableFooterView  = [[UIView alloc]initWithFrame:CGRectZero];
     lblEmailID.text = [[NSUserDefaults standardUserDefaults]objectForKey:USEREMAILID];
+    lblEmailID.textAlignment = NSTextAlignmentCenter;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {

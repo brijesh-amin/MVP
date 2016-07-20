@@ -38,7 +38,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.navigationItem.titleView = [SHARED_APPDELEGATE getNavigationWithTitle:@"FeedBack" fontSize:18];
+    self.navigationItem.titleView = [SHARED_APPDELEGATE getNavigationWithTitle:@"Feedback" fontSize:18];
     
     UIImage *backButtonImage = [UIImage imageNamed:@"Back"];
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];

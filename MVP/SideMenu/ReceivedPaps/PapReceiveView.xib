@@ -25,8 +25,8 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginBack" translatesAutoresizingMaskIntoConstraints="NO" id="N2X-tO-DAO">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXm-3I-bv0">
-                    <rect key="frame" x="5" y="107" width="310" height="364"/>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cXm-3I-bv0">
+                    <rect key="frame" x="5" y="100" width="310" height="364"/>
                     <subviews>
                         <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nF-bc-emF">
                             <rect key="frame" x="0.0" y="0.0" width="310" height="364"/>
@@ -43,11 +43,11 @@
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                             <inset key="contentEdgeInsets" minX="-15" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="65" minY="5" maxX="0.0" maxY="0.0"/>
-                            <state key="normal" title="DisLike" image="DisLike">
+                            <state key="normal" title="No" image="DisLike">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5QU-wF-L47">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5QU-wF-L47">
                             <rect key="frame" x="127" y="27" width="49" height="22"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                             <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -55,7 +55,7 @@
                                 <color key="titleColor" red="0.92549019610000005" green="0.87058823529999996" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPE-vA-oAJ">
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPE-vA-oAJ">
                             <rect key="frame" x="114" y="314" width="83" height="22"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                             <inset key="contentEdgeInsets" minX="-15" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -69,7 +69,7 @@
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
                             <inset key="contentEdgeInsets" minX="-30" minY="0.0" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="60" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            <state key="normal" title="Like" image="like">
+                            <state key="normal" title="Yes" image="like">
                                 <color key="titleColor" red="0.92549019610000005" green="0.87058823529999996" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                         </button>
@@ -84,13 +84,9 @@
                         <constraint firstAttribute="width" constant="310" id="zVC-TL-0J8"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UC-hJ-mBp">
-                    <rect key="frame" x="98" y="52" width="125" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UC-hJ-mBp">
+                    <rect key="frame" x="49" y="51" width="221" height="30"/>
                     <color key="backgroundColor" red="0.79215686269999996" green="0.71372549019999998" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="125" id="Ayq-Ev-j5P"/>
-                        <constraint firstAttribute="height" constant="30" id="ZnU-CA-cik"/>
-                    </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                     <inset key="imageEdgeInsets" minX="-10" minY="5" maxX="0.0" maxY="0.0"/>
                     <state key="normal" title="Design">
@@ -105,11 +101,12 @@
             <constraints>
                 <constraint firstItem="N2X-tO-DAO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="COi-me-avt"/>
                 <constraint firstItem="cXm-3I-bv0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JNt-W5-RgQ"/>
-                <constraint firstItem="cXm-3I-bv0" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="107" id="OgQ-wZ-7yv"/>
-                <constraint firstItem="6UC-hJ-mBp" firstAttribute="centerX" secondItem="cXm-3I-bv0" secondAttribute="centerX" constant="0.5" id="a6N-eq-ztn"/>
+                <constraint firstItem="6UC-hJ-mBp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="49" id="O9d-oV-eYT"/>
+                <constraint firstItem="cXm-3I-bv0" firstAttribute="top" secondItem="6UC-hJ-mBp" secondAttribute="bottom" constant="19" id="leu-6z-I0K"/>
+                <constraint firstItem="6UC-hJ-mBp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="51" id="mjY-dQ-IwD"/>
                 <constraint firstAttribute="bottom" secondItem="N2X-tO-DAO" secondAttribute="bottom" id="nRB-Im-sBg"/>
                 <constraint firstItem="N2X-tO-DAO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nc2-Q2-1Cr"/>
-                <constraint firstItem="cXm-3I-bv0" firstAttribute="top" secondItem="6UC-hJ-mBp" secondAttribute="bottom" constant="25" id="pSC-xe-YG9"/>
+                <constraint firstAttribute="trailing" secondItem="6UC-hJ-mBp" secondAttribute="trailing" constant="50" id="r2M-o9-KBJ"/>
                 <constraint firstAttribute="trailing" secondItem="N2X-tO-DAO" secondAttribute="trailing" id="ycL-wl-7Uj"/>
             </constraints>
             <point key="canvasLocation" x="2175" y="577"/>

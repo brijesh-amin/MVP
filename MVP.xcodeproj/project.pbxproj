@@ -12,6 +12,7 @@
 		3D457E171D380F1100EE1012 /* sendList_MsgId.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D457E151D380F1100EE1012 /* sendList_MsgId.xib */; };
 		3D457E1E1D38111000EE1012 /* sendListWithMsgId.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D457E1C1D38111000EE1012 /* sendListWithMsgId.m */; };
 		3D457E1F1D38111000EE1012 /* sendListWithMsgId.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D457E1D1D38111000EE1012 /* sendListWithMsgId.xib */; };
+		3DB8389F1D3EA76500BDF4C8 /* 180.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DB8389E1D3EA76500BDF4C8 /* 180.png */; };
 		7D0882B31CF577EC00B77D82 /* AttributImgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D0882B21CF577EC00B77D82 /* AttributImgView.m */; };
 		7D151BF71D3149AF004E4CFE /* ArrowDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D151BF41D3149AF004E4CFE /* ArrowDown.png */; };
 		7D151BF81D3149AF004E4CFE /* ArrowDown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D151BF51D3149AF004E4CFE /* ArrowDown@2x.png */; };
@@ -236,6 +237,7 @@
 		3D457E1B1D38111000EE1012 /* sendListWithMsgId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sendListWithMsgId.h; sourceTree = "<group>"; };
 		3D457E1C1D38111000EE1012 /* sendListWithMsgId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sendListWithMsgId.m; sourceTree = "<group>"; };
 		3D457E1D1D38111000EE1012 /* sendListWithMsgId.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = sendListWithMsgId.xib; sourceTree = "<group>"; };
+		3DB8389E1D3EA76500BDF4C8 /* 180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 180.png; path = MVP/Assets.xcassets/AppIcon.appiconset/180.png; sourceTree = "<group>"; };
 		7D0882B11CF577EC00B77D82 /* AttributImgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttributImgView.h; sourceTree = "<group>"; };
 		7D0882B21CF577EC00B77D82 /* AttributImgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttributImgView.m; sourceTree = "<group>"; };
 		7D151BF41D3149AF004E4CFE /* ArrowDown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ArrowDown.png; sourceTree = "<group>"; };
@@ -1024,6 +1026,7 @@
 		7DF7C8D91CE6D3D700EF8D0D = {
 			isa = PBXGroup;
 			children = (
+				3DB8389E1D3EA76500BDF4C8 /* 180.png */,
 				7DF7C8E41CE6D3D700EF8D0D /* MVP */,
 				7DF7C9011CE6D3D700EF8D0D /* MVPTests */,
 				7DF7C90C1CE6D3D700EF8D0D /* MVPUITests */,
@@ -1325,6 +1328,7 @@
 				7DB1AD681CEB7234008A0128 /* PapChatCell.xib in Resources */,
 				7D8E25D41CEB200F001FD10E /* PapChatView.xib in Resources */,
 				7D9CE9B01CECC14300CFF3BD /* SendFeedBackView.xib in Resources */,
+				3DB8389F1D3EA76500BDF4C8 /* 180.png in Resources */,
 				3D457E121D3809DF00EE1012 /* ic_check_12pt_2x.png in Resources */,
 				7D4558081CF027E200FA8B97 /* AnalyticCollectionCell.xib in Resources */,
 				7D8E25CF1CEB1FAC001FD10E /* MyAccountView.xib in Resources */,
