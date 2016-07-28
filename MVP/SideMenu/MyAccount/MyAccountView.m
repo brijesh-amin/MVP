@@ -132,7 +132,7 @@
             strColarSize = [dict objectForKey:@"colar"];
             
            // scrollV.contentSize = CGSizeMake(scrollV.contentSize.width, scrollV.frame.origin.y,2000);
-[scrollV setContentSize:CGSizeMake(scrollV.contentSize.width,1000)];
+[scrollV setContentSize:CGSizeMake(scrollV.contentSize.width,700)];
             
         }else{
             [btnFemale setSelected:YES];

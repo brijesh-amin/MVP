@@ -21,20 +21,21 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginBack" translatesAutoresizingMaskIntoConstraints="NO" id="yWJ-fj-l5b">
                     <rect key="frame" x="0.0" y="0.0" width="280" height="568"/>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="180.png" translatesAutoresizingMaskIntoConstraints="NO" id="XXG-je-1tz">
+                    <rect key="frame" x="110" y="35" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="Fxy-up-XTr"/>
+                        <constraint firstAttribute="height" constant="60" id="lbe-KS-oiU"/>
+                    </constraints>
+                </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lGk-Ek-gT2">
-                    <rect key="frame" x="0.0" y="140" width="280" height="419"/>
+                    <rect key="frame" x="0.0" y="100" width="280" height="459"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="5T9-kt-Psj"/>
                         <outlet property="delegate" destination="-1" id="kL3-wU-oFM"/>
                     </connections>
                 </tableView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="180.png" translatesAutoresizingMaskIntoConstraints="NO" id="XXG-je-1tz">
-                    <rect key="frame" x="90" y="35" width="100" height="100"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="100" id="lbe-KS-oiU"/>
-                    </constraints>
-                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -49,7 +50,6 @@
                 <constraint firstAttribute="bottom" secondItem="lGk-Ek-gT2" secondAttribute="bottom" constant="9" id="Vr1-fa-uC7"/>
                 <constraint firstItem="lGk-Ek-gT2" firstAttribute="top" secondItem="XXG-je-1tz" secondAttribute="bottom" constant="5" id="XOp-Aj-h5A"/>
                 <constraint firstItem="lGk-Ek-gT2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="d0k-Lg-NLc"/>
-                <constraint firstItem="XXG-je-1tz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="90" id="dAa-Uf-w4U"/>
                 <constraint firstAttribute="trailing" secondItem="yWJ-fj-l5b" secondAttribute="trailing" id="p7x-Mt-Ykb"/>
                 <constraint firstItem="yWJ-fj-l5b" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rOp-AD-StC"/>
                 <constraint firstItem="XXG-je-1tz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="35" id="riD-wZ-TwR"/>

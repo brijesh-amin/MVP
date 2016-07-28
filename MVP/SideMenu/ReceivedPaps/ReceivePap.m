@@ -37,7 +37,7 @@
     
     
 
-    self.navigationItem.titleView = [SHARED_APPDELEGATE getNavigationWithTitle:@"Received Pap" fontSize:18];
+    self.navigationItem.titleView = [SHARED_APPDELEGATE getNavigationWithTitle:@"Receive Pap" fontSize:18];
     
     UIImage *backButtonImage = [UIImage imageNamed:@"Back"];
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];

@@ -45,9 +45,9 @@
     
     [arrSideMenu addObject:[self getDictfromTitle:@"News Feed" andImageIco:@"UserName"]];
     [arrSideMenu addObject:[self getDictfromTitle:@"My Profile" andImageIco:@"UserName"]];
-    [arrSideMenu addObject:[self getDictfromTitle:@"Pap Chat" andImageIco:@"UserName"]];
-    [arrSideMenu addObject:[self getDictfromTitle:@"Received Pap" andImageIco:@"UserName"]];
-    [arrSideMenu addObject:[self getDictfromTitle:@"Sent Pap" andImageIco:@"UserName"]];
+    [arrSideMenu addObject:[self getDictfromTitle:@"Papf Chat" andImageIco:@"UserName"]];
+    [arrSideMenu addObject:[self getDictfromTitle:@"Received Papf" andImageIco:@"UserName"]];
+    [arrSideMenu addObject:[self getDictfromTitle:@"Sent Papf" andImageIco:@"UserName"]];
     [arrSideMenu addObject:[self getDictfromTitle:@"Analytics Tool" andImageIco:@"UserName"]];
     [arrSideMenu addObject:[self getDictfromTitle:@"LogOut" andImageIco:@"UserName"]];
     
