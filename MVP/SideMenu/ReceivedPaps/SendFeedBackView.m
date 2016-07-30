@@ -134,15 +134,28 @@
     
     SHARED_APPDELEGATE.arrSavedAttributes;
     
+//    NSString *strLikes;
+//    for(int i=0; i < [SHARED_APPDELEGATE.arrSavedAttributes count] ; i++){
+//        
+//        if(i==0 ){
+//            strLikes =[NSString stringWithFormat:@"%@",[SHARED_APPDELEGATE.arrSavedAttributes objectAtIndex:i]];
+//        }else{
+//            strLikes =[NSString stringWithFormat:@",%@",[SHARED_APPDELEGATE.arrSavedAttributes objectAtIndex:i]];
+//        }
+//    }
     NSString *strLikes;
+    NSString *temp;
     for(int i=0; i < [SHARED_APPDELEGATE.arrSavedAttributes count] ; i++){
         
         if(i==0 ){
             strLikes =[NSString stringWithFormat:@"%@",[SHARED_APPDELEGATE.arrSavedAttributes objectAtIndex:i]];
         }else{
-            strLikes =[NSString stringWithFormat:@",%@",[SHARED_APPDELEGATE.arrSavedAttributes objectAtIndex:i]];
+            
+            temp =[NSString stringWithFormat:@",%@",[SHARED_APPDELEGATE.arrSavedAttributes objectAtIndex:i]];
+            strLikes=[strLikes stringByAppendingString:temp];
         }
     }
+
     
     
     [params setObject:strLikes forKey:@"att_feedback"];

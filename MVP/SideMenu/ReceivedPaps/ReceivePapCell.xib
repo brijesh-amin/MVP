@@ -39,8 +39,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Chat" translatesAutoresizingMaskIntoConstraints="NO" id="ghq-Dc-Oq4">
                                 <rect key="frame" x="189" y="34" width="12" height="12"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="like" translatesAutoresizingMaskIntoConstraints="NO" id="fGq-fU-lTv">
-                                <rect key="frame" x="210" y="32" width="12" height="12"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mail" translatesAutoresizingMaskIntoConstraints="NO" id="fGq-fU-lTv">
+                                <rect key="frame" x="209" y="32" width="13" height="14"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -81,6 +81,6 @@
     </objects>
     <resources>
         <image name="Chat" width="12" height="12"/>
-        <image name="like" width="12" height="11"/>
+        <image name="mail" width="12" height="12"/>
     </resources>
 </document>

@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 #import "MasterViewController.h"
+#import "AsyncImage.h"
+
 @interface sendList_MsgId : MasterViewController<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic , strong) IBOutlet UITableView *tblSendPap;
@@ -17,5 +19,6 @@
 @property (nonatomic , strong) NSMutableArray *arrSendPapList2;
 @property (nonatomic , strong) NSString *nextMsgId;
 @property (strong, nonatomic) IBOutlet UIView *view;
+@property (strong, nonatomic) IBOutlet AsyncImage *imgAsync;
 
 @end

@@ -37,7 +37,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.navigationItem.titleView = [SHARED_APPDELEGATE getNavigationWithTitle:@"Pap Chat Home" fontSize:18];
+    self.navigationItem.titleView = [SHARED_APPDELEGATE getNavigationWithTitle:@"Paps Chat Home" fontSize:18];
     
     arrSelectPap = [[NSMutableArray alloc]init];
     

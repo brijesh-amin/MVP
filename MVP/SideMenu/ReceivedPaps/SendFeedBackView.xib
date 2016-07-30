@@ -62,7 +62,7 @@
                                                         <constraint firstAttribute="height" constant="30" id="eJX-Ee-915"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anything else you want to tell" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UA3-FG-h6Z">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anything else you want to tell ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UA3-FG-h6Z">
                                                     <rect key="frame" x="19" y="50" width="252" height="18"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="18" id="9Ta-QT-9UX"/>
@@ -72,7 +72,6 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.20784313730000001" green="0.20784313730000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstItem="UA3-FG-h6Z" firstAttribute="leading" secondItem="f2X-4a-kai" secondAttribute="leading" constant="19" id="8aU-Zg-j1F"/>
                                                 <constraint firstItem="eDg-UR-p50" firstAttribute="leading" secondItem="f2X-4a-kai" secondAttribute="leading" id="Fcr-b1-DQg"/>

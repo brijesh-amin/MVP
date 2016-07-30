@@ -18,6 +18,7 @@
 #import "MFSideMenu.h"
 #import "SendPapView.h"
 #import "AppDelegate.h"
+#import "ShowFeedback.h"
 
 @interface MVPSideMenu ()
 
@@ -45,11 +46,13 @@
     
     [arrSideMenu addObject:[self getDictfromTitle:@"News Feed" andImageIco:@"UserName"]];
     [arrSideMenu addObject:[self getDictfromTitle:@"My Profile" andImageIco:@"UserName"]];
-    [arrSideMenu addObject:[self getDictfromTitle:@"Papf Chat" andImageIco:@"UserName"]];
-    [arrSideMenu addObject:[self getDictfromTitle:@"Received Papf" andImageIco:@"UserName"]];
-    [arrSideMenu addObject:[self getDictfromTitle:@"Sent Papf" andImageIco:@"UserName"]];
+    [arrSideMenu addObject:[self getDictfromTitle:@"Paps Chat" andImageIco:@"UserName"]];
+    [arrSideMenu addObject:[self getDictfromTitle:@"Received Paps" andImageIco:@"UserName"]];
+    [arrSideMenu addObject:[self getDictfromTitle:@"Sent Paps" andImageIco:@"UserName"]];
     [arrSideMenu addObject:[self getDictfromTitle:@"Analytics Tool" andImageIco:@"UserName"]];
     [arrSideMenu addObject:[self getDictfromTitle:@"LogOut" andImageIco:@"UserName"]];
+    
+    //[arrSideMenu addObject:[self getDictfromTitle:@"Analutic Feedback" andImageIco:@"UserName"]];
     
     tblSideMenu.tableFooterView  = [[UIView alloc]initWithFrame:CGRectZero];
     lblEmailID.text = [[NSUserDefaults standardUserDefaults]objectForKey:USEREMAILID];

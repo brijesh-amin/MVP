@@ -95,16 +95,15 @@ AppDelegate *appDelegateP;
     BOOL isVerticalGesture = fabs(velocity.y) > fabs(velocity.x);
     
     
-    if (isVerticalGesture) {
-        if (velocity.y > 0) {
+    if (!isVerticalGesture) {
+        if (velocity.x > 0) {
             
-            NSLog(@"DOWN");
-            strLikeDislike = @"2";
-            
+            NSLog(@"RIGHT");
+            strLikeDislike = @"1";
         } else {
             
-            NSLog(@"UP");
-            strLikeDislike = @"3";
+            NSLog(@"LEFT ");
+            strLikeDislike = @"0";
         }
         
     }else {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -16,6 +16,7 @@
                 <subviews>
                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5dI-Tl-M9B">
                         <rect key="frame" x="8" y="4" width="145" height="35"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="35" id="rBB-jz-wEh"/>
                         </constraints>
@@ -28,6 +29,7 @@
                     </textField>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Nq-O6-p3p">
                         <rect key="frame" x="156" y="0.0" width="22" height="43"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="22" id="Fux-mZ-7OR"/>
                             <constraint firstAttribute="height" constant="43" id="M3N-fD-ic5"/>
@@ -38,6 +40,7 @@
                         </connections>
                     </button>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstItem="5dI-Tl-M9B" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="3Eu-w1-sXA"/>
                     <constraint firstItem="7Nq-O6-p3p" firstAttribute="leading" secondItem="5dI-Tl-M9B" secondAttribute="trailing" constant="3" id="IG2-WA-qhd"/>
@@ -46,6 +49,7 @@
                     <constraint firstItem="5dI-Tl-M9B" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="pHF-Ax-lHD"/>
                 </constraints>
             </tableViewCellContentView>
+            <animations/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="txtAttribut" destination="5dI-Tl-M9B" id="Th4-B1-M5c"/>

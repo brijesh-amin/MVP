@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Spoon-Bold.ttf">
@@ -21,6 +21,7 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserName" translatesAutoresizingMaskIntoConstraints="NO" id="nep-6D-nZo">
                         <rect key="frame" x="16" y="10" width="24" height="24"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="24" id="ajc-pC-M8w"/>
                             <constraint firstAttribute="height" constant="24" id="qRM-5T-yj1"/>
@@ -28,6 +29,7 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NewsFeed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V03-2H-jFE">
                         <rect key="frame" x="55" y="12" width="233" height="20"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="233" id="IJo-WE-CyM"/>
                             <constraint firstAttribute="height" constant="20" id="tI0-PH-ebN"/>
@@ -37,6 +39,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstItem="V03-2H-jFE" firstAttribute="leading" secondItem="nep-6D-nZo" secondAttribute="trailing" constant="15" id="Dgw-10-xwv"/>
                     <constraint firstItem="nep-6D-nZo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="H29-4a-KBp"/>
@@ -45,6 +48,7 @@
                     <constraint firstItem="V03-2H-jFE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="hAw-Rs-KJG"/>
                 </constraints>
             </tableViewCellContentView>
+            <animations/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="imgTitleIcon" destination="nep-6D-nZo" id="pEm-IB-1z4"/>

@@ -105,7 +105,7 @@
 #define getRecievePap_Url [NSString stringWithFormat:@"%@%@",Base_Url,@"getrecievepap.php"]
 #define getFeedbackPap_Url [NSString stringWithFormat:@"%@%@",Base_Url,@"getfeedback.php"]
 #define feedbackPap_Url [NSString stringWithFormat:@"%@%@",Base_Url,@"feedbackpap.php"]
-
+#define feedBackData_Url [NSString stringWithFormat:@"%@%@",Base_Url,@"feedbackdata.php"]
 #define anlytics_Url [NSString stringWithFormat:@"%@%@",Base_Url,@"anlytics.php"]
 #define trend_Url [NSString stringWithFormat:@"%@%@",Base_Url,@"gettrending.php"]
 #define forgot_Url [NSString stringWithFormat:@"%@%@",Base_Url,@"forget.php"]

@@ -12,6 +12,7 @@
 #import "PapChatHomeView.h"
 #import "StaticClass.h"
 #import "AppDelegate.h"
+#import "ShowFeedback.h"
 
 @interface sendList_MsgId ()
 
@@ -30,6 +31,11 @@
     tblSendPap.dataSource = self;
     tblSendPap.delegate = self;
     
+    _imgAsync.layer.cornerRadius = 50.0f;
+    _imgAsync.layer.borderColor = [UIColor whiteColor].CGColor;
+    _imgAsync.layer.borderWidth = 1;
+    _imgAsync.clipsToBounds = YES;
+
     UIImage *backButtonImage = [UIImage imageNamed:@"Back"];
     UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     
@@ -86,6 +92,13 @@
             [arrSendPapList2 addObject:objPapChat];
             [tblSendPap reloadData];
         }
+        
+        if (arrChatPap.count <= 0 || [[[arrChatPap objectAtIndex:0] objectForKey:@"img_url"] isEqualToString:@""]) {
+            _imgAsync.image = [UIImage imageNamed:@"btnPlaceHolder.png"];
+        }else{
+            [_imgAsync loadImageFromStringforUserimg:[NSString stringWithFormat:@"%@",[[arrChatPap objectAtIndex:0] objectForKey:@"img_url"]]];
+        }
+
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
         [SHARED_APPDELEGATE hideLoadingView];
@@ -155,6 +168,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (IBAction)gotoFeedbackAnylyticScreenAction:(id)sender {
+    if (arrSendPapList2.count > 0) {
+        ShowFeedback *viewPapChat = [[ShowFeedback alloc] initWithNibName:@"ShowFeedback" bundle:nil];
+        PapChat *objPapChat = [[PapChat alloc] init];
+        objPapChat = [arrSendPapList2 objectAtIndex:0];
+        viewPapChat.strMessageId = objPapChat.msg_id;
+        [[self navigationController] pushViewController:viewPapChat animated:YES];
+    } else {
+        
+    }
+
 }
 
 @end
