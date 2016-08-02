@@ -109,6 +109,7 @@
             objPapChat.img_url = [dict objectForKey:@"image"];
             objPapChat.email_id = [dict objectForKey:@"email_id"];
             objPapChat.name = [dict objectForKey:@"name"];
+            objPapChat.align = [dict objectForKey:@"align"];
             objPapChat.feedback_message = [dict objectForKey:@"feedback_message"];
             
             [arrChatList addObject:objPapChat];
@@ -166,22 +167,42 @@
 {
     static NSString *simpleTableIdentifier = @"Search";
     
-    PapChatHomeCell *cell = (PapChatHomeCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    if (cell == nil)
-    {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PapChatHomeCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
-    }
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    PapChat *objPap = [arrChatList objectAtIndex:indexPath.row];
     
-    if ([arrChatList count] > indexPath.row) {
+    NSString *stralign=objPap.align;
+    NSInteger b = [stralign integerValue];
+    if (b==1) {
         
-        PapChat *objPap = [arrChatList objectAtIndex:indexPath.row];
+        PapChatHomeCell *cell = (PapChatHomeCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+        if (cell == nil)
+        {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PapChatHomeCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
-        [cell setPapChatHomeData:objPap];
+        if ([arrChatList count] > indexPath.row) {
+            
+            PapChat *objPap = [arrChatList objectAtIndex:indexPath.row];
+            [cell setPapChatHomeData:objPap];
+        }
+            return cell;
+    }else{
+        PapChatHomeCell *cell = (PapChatHomeCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+        if (cell == nil)
+        {
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"PapChatHomeLeftCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+        }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        if ([arrChatList count] > indexPath.row) {
+            
+            PapChat *objPap = [arrChatList objectAtIndex:indexPath.row];
+            [cell setPapChatHomeData:objPap];
+        }
+        return cell;
     }
-    
-    return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -271,9 +292,12 @@
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
-    
+    NSString *stremail = [[NSUserDefaults standardUserDefaults]objectForKey:USEREMAILID];
+   
     [params setObject:objPapChats.msg_id forKey:@"msg_id"];
     [params setObject:objPapChats.papID forKey:@"id"];
+    [params setObject:stremail forKey:@"email_id"];
+    [params setObject:@"1" forKey:@"checkbit"];
     [params setObject:txtMsg.text forKey:@"feedback"];
     
     [SHARED_APPDELEGATE showLoadingView];

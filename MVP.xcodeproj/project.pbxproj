@@ -194,6 +194,8 @@
 		CF87D23D1D3B6137008F1C90 /* setprofile.png in Resources */ = {isa = PBXBuildFile; fileRef = CF87D23C1D3B6137008F1C90 /* setprofile.png */; };
 		CF96141C1D504B3A00897DDF /* ShowFirstFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = CF96141A1D504B3A00897DDF /* ShowFirstFeedback.m */; };
 		CF96141D1D504B3A00897DDF /* ShowFirstFeedback.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF96141B1D504B3A00897DDF /* ShowFirstFeedback.xib */; };
+		CF9614211D507EDF00897DDF /* PapChatHomeLeftCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF96141F1D507EDF00897DDF /* PapChatHomeLeftCell.m */; };
+		CF9614221D507EDF00897DDF /* PapChatHomeLeftCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF9614201D507EDF00897DDF /* PapChatHomeLeftCell.xib */; };
 		FF2ECFFA1D4B147B00EE2ED7 /* ShowFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2ECFF81D4B147B00EE2ED7 /* ShowFeedback.m */; };
 		FF2ECFFB1D4B147B00EE2ED7 /* ShowFeedback.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2ECFF91D4B147B00EE2ED7 /* ShowFeedback.xib */; };
 /* End PBXBuildFile section */
@@ -555,6 +557,9 @@
 		CF9614191D504B3A00897DDF /* ShowFirstFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowFirstFeedback.h; sourceTree = "<group>"; };
 		CF96141A1D504B3A00897DDF /* ShowFirstFeedback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowFirstFeedback.m; sourceTree = "<group>"; };
 		CF96141B1D504B3A00897DDF /* ShowFirstFeedback.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowFirstFeedback.xib; sourceTree = "<group>"; };
+		CF96141E1D507EDF00897DDF /* PapChatHomeLeftCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PapChatHomeLeftCell.h; sourceTree = "<group>"; };
+		CF96141F1D507EDF00897DDF /* PapChatHomeLeftCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PapChatHomeLeftCell.m; sourceTree = "<group>"; };
+		CF9614201D507EDF00897DDF /* PapChatHomeLeftCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PapChatHomeLeftCell.xib; sourceTree = "<group>"; };
 		FF2ECFF71D4B147B00EE2ED7 /* ShowFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowFeedback.h; sourceTree = "<group>"; };
 		FF2ECFF81D4B147B00EE2ED7 /* ShowFeedback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowFeedback.m; sourceTree = "<group>"; };
 		FF2ECFF91D4B147B00EE2ED7 /* ShowFeedback.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowFeedback.xib; sourceTree = "<group>"; };
@@ -695,6 +700,9 @@
 		7D8E25C71CEB1F87001FD10E /* PapChat */ = {
 			isa = PBXGroup;
 			children = (
+				CF96141E1D507EDF00897DDF /* PapChatHomeLeftCell.h */,
+				CF96141F1D507EDF00897DDF /* PapChatHomeLeftCell.m */,
+				CF9614201D507EDF00897DDF /* PapChatHomeLeftCell.xib */,
 				7D8E25D01CEB200F001FD10E /* PapChatView.h */,
 				7D8E25D11CEB200F001FD10E /* PapChatView.m */,
 				7D8E25D21CEB200F001FD10E /* PapChatView.xib */,
@@ -1399,6 +1407,7 @@
 				7DF7C9201CE6D7B100EF8D0D /* LoginView.xib in Resources */,
 				3D457E171D380F1100EE1012 /* sendList_MsgId.xib in Resources */,
 				7DF7C8F01CE6D3D700EF8D0D /* Main.storyboard in Resources */,
+				CF9614221D507EDF00897DDF /* PapChatHomeLeftCell.xib in Resources */,
 				7DA385121CFDC95A009E905C /* SendPapChat.xib in Resources */,
 				7D1E03A81D214D1200EBD516 /* SendPapCell.xib in Resources */,
 			);
@@ -1488,6 +1497,7 @@
 				7D910BA51CE75BC400FC650F /* UIViewController+MJPopupViewController.m in Sources */,
 				7D910BA41CE75BC400FC650F /* MJPopupBackgroundView.m in Sources */,
 				7D45583A1CF02DF500FA8B97 /* PNScatterChartData.m in Sources */,
+				CF9614211D507EDF00897DDF /* PapChatHomeLeftCell.m in Sources */,
 				7D4558331CF02DF500FA8B97 /* PNLineChartData.m in Sources */,
 				7D986E601CE75349009B9AC3 /* SelectedView.m in Sources */,
 				7D4558301CF02DF500FA8B97 /* PNColor.m in Sources */,

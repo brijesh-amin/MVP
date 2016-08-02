@@ -160,6 +160,7 @@
     
     [params setObject:strLikes forKey:@"att_feedback"];
     [params setObject:strPapID forKey:@"id"];
+    [params setObject:@"0" forKey:@"checkbit"];
     [params setObject:txvFeedback.text forKey:@"feedback"];
     
     [SHARED_APPDELEGATE showLoadingView];
