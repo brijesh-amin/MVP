@@ -7,19 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "HMSegmentedControl.h"
 
-@interface ShowFeedback : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface ShowFirstFeedback : UIViewController
 
 {
-    IBOutlet UIView *segView;
-    IBOutlet UITableView *tvListData;
     IBOutlet UILabel *lblAttribute;
     IBOutlet UILabel *lblNoofYes;
     IBOutlet UILabel *lbNoOfNo;
     NSMutableArray *arradata;
 }
-
+-(IBAction)buttontouch:(id)sender;
 @property (nonatomic,retain) NSString *strMessageId;
 
 

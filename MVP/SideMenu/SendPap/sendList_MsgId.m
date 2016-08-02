@@ -12,7 +12,7 @@
 #import "PapChatHomeView.h"
 #import "StaticClass.h"
 #import "AppDelegate.h"
-#import "ShowFeedback.h"
+#import "ShowFirstFeedback.h"
 
 @interface sendList_MsgId ()
 
@@ -171,7 +171,7 @@
 }
 - (IBAction)gotoFeedbackAnylyticScreenAction:(id)sender {
     if (arrSendPapList2.count > 0) {
-        ShowFeedback *viewPapChat = [[ShowFeedback alloc] initWithNibName:@"ShowFeedback" bundle:nil];
+        ShowFirstFeedback *viewPapChat = [[ShowFirstFeedback alloc] initWithNibName:@"ShowFirstFeedback" bundle:nil];
         PapChat *objPapChat = [[PapChat alloc] init];
         objPapChat = [arrSendPapList2 objectAtIndex:0];
         viewPapChat.strMessageId = objPapChat.msg_id;
