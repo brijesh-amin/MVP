@@ -29,7 +29,7 @@
                             <color key="backgroundColor" red="0.79215686269999996" green="0.71372549019999998" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                             <inset key="imageEdgeInsets" minX="-10" minY="5" maxX="0.0" maxY="0.0"/>
-                            <state key="normal" title="Feedback">
+                            <state key="normal" title="See User's Feedback">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>

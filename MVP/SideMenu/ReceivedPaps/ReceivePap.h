@@ -23,7 +23,7 @@
 
 //NSString
 @property (nonatomic , strong) NSString *strImg;
-
+@property (nonatomic , strong) NSString *strName;
 @property (nonatomic , strong) PapChat *BeanPapChat;
 
 @end

@@ -120,6 +120,7 @@
     if ([strFeedback isEqualToString:@"0"]) {
         ReceivePap *viewSend = [[ReceivePap alloc] initWithNibName:@"ReceivePap" bundle:nil];
         [userDefault setObject:objPap.msg_id forKey:MSG_ID];
+        [userDefault setObject:objPap.name forKey:SENDER_NAME];
         [userDefault setObject:objPap.papID forKey:PAPID];
         viewSend.strImg = objPap.img_url;
         viewSend.BeanPapChat = objPap;

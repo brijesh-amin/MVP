@@ -41,7 +41,7 @@
 #define MSG_ID      @"Msg_ID"
 #define PAPID       @"Pap_ID"
 #define NAME        @"Name"
-
+#define SENDER_NAME @"SENDER_NAME"
 //Login
 #define UserName @"Username"
 #define Password @"Password"

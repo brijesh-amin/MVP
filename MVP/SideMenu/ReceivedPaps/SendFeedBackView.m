@@ -55,9 +55,9 @@
     UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
     self.navigationItem.leftBarButtonItem = backBarButtonItem;
     
-    NSString *strName = [[NSUserDefaults standardUserDefaults]objectForKey:NAME];
+    NSString *strName = [[NSUserDefaults standardUserDefaults]objectForKey:SENDER_NAME];
     lblName.text = strName;
-        
+        NSLog(@"Name %@",strName);
     //TextView
     txvFeedback.layer.sublayerTransform = CATransform3DMakeTranslation(0, 0, 0);
     txvFeedback.autocorrectionType = UITextAutocorrectionTypeNo;
@@ -124,7 +124,7 @@
     
     NSString *strEmailID = [[NSUserDefaults standardUserDefaults]objectForKey:USEREMAILID];
     NSString *strMsgID = [[NSUserDefaults standardUserDefaults]objectForKey:MSG_ID];
-    NSString *strPapID = [[NSUserDefaults standardUserDefaults]objectForKey:PAPID];
+   NSString *strPapID = [[NSUserDefaults standardUserDefaults]objectForKey:PAPID];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     NSMutableDictionary *params = [[NSMutableDictionary alloc]init];

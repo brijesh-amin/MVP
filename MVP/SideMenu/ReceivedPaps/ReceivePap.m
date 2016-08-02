@@ -17,6 +17,7 @@
 @implementation ReceivePap
 
 @synthesize strImg;
+@synthesize strName;
 @synthesize BeanPapChat;
 @synthesize arrData;
 

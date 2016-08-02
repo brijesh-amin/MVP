@@ -125,13 +125,13 @@ int segSelIndex = 0;
     //HMSegmentedControl *segmentedControl1 = [[HMSegmentedControl alloc] initWithSectionTitles:@[@"Navratri", @"Diwali", @"X-mas", @"New Year", @"Utarayan", @"Holi", @"Rakshabandhan", @"Janmastami"]];
     segmentedControl1.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleWidth;
     
-    segmentedControl1.segmentEdgeInset = UIEdgeInsetsMake(0, 10, 0, 10);
+    segmentedControl1.segmentEdgeInset = UIEdgeInsetsMake(0, 10, 0, 20);
     segmentedControl1.selectionStyle = HMSegmentedControlSelectionStyleFullWidthStripe;
     segmentedControl1.selectionIndicatorLocation = HMSegmentedControlSelectionIndicatorLocationDown;
     segmentedControl1.verticalDividerEnabled = NO;
     segmentedControl1.verticalDividerColor = [UIColor blackColor];
     segmentedControl1.verticalDividerWidth = 0.5f;
-    [segmentedControl1 setTitleFormatter:^NSAttributedString *(HMSegmentedControl *segmentedControl, NSString *title, NSUInteger index, BOOL selected)
+    [segmentedControl1 setTitleFormatter:^NSAttributedString *(HMSegmentedControl *segmentedControl, NSString *title, NSUInteger index , BOOL selected)
      {
          if (index == 0)
          {
@@ -217,7 +217,7 @@ int segSelIndex = 0;
         int kvalue = (int)segmentedControl.selectedSegmentIndex;
         NSLog(@"Selected index %ld (via UIControlEventValueChanged)", (long)segmentedControl.selectedSegmentIndex);
         
-        segSelIndex = kvalue;
+        segSelIndex = kvalue ;
         [tvListData reloadData];
 }
 
