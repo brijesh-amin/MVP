@@ -22,6 +22,23 @@
     
     self.navigationItem.titleView = [SHARED_APPDELEGATE getNavigationWithTitle:@"Analytic Feedback" fontSize:18];
     
+    UIImage *backButtonImage = [UIImage imageNamed:@"Back"];
+    UIButton *backButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [backButton setImage:backButtonImage
+                forState:UIControlStateNormal];
+    
+    backButton.frame = CGRectMake(0, 0, backButtonImage.size.width, backButtonImage.size.height);
+    
+    [backButton addTarget:self
+                   action:@selector(popViewController)
+         forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *backBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    self.navigationItem.leftBarButtonItem = backBarButtonItem;
+    
+    
+    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     NSMutableDictionary *params = [[NSMutableDictionary alloc]init];
     
@@ -81,6 +98,11 @@
         NSLog(@"Error: %@", error);
         NSLog(@"operation %@ " , operation);
     }];
+}
+
+-(void)popViewController
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
