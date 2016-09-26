@@ -16,6 +16,11 @@
     IBOutlet NSLayoutConstraint *constHeightMale;
 
 }
+@property (strong, nonatomic) IBOutlet UILabel *lbltermcondions;
+
+@property (strong, nonatomic) IBOutlet UIButton *btntest;
+
+
 //UIScrollView
 @property (nonatomic , strong) IBOutlet UIScrollView *scrollV;
 
@@ -36,6 +41,9 @@
 
 
 //Button
+
+
+
 @property (nonatomic , strong) IBOutlet UIButton *btnLocation;
 @property (nonatomic , strong) IBOutlet UIButton *btnMale;
 @property (nonatomic , strong) IBOutlet UIButton *btnFemale;
@@ -63,4 +71,6 @@
 //UIToolBar
 @property (nonnull , strong) IBOutlet UIToolbar *toolDone;
 
+
+- (void) btnClick;
 @end

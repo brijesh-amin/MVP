@@ -18,6 +18,7 @@
     
     BOOL profilePic;
 }
+@property (strong, nonatomic) IBOutlet UIScrollView *srlview;
 
 //UIScrollView
 @property (nonatomic , strong) IBOutlet UIScrollView *scrollV;

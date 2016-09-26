@@ -45,12 +45,12 @@
 //Login
 #define UserName @"Username"
 #define Password @"Password"
-#define Email_ID @"Email_ID"
+#define Email_ID @"Email"
 #define provideUserName @"Please Enter UserName"
 #define providePassword @"Please Enter password"
 
 //Register
-#define EMailID @"E-Mail ID"
+#define EMailID @"Email"
 #define CreatePassword @"Create Password"
 #define ConfirmPassword @"Confirm Password"
 #define MM @"MM"

@@ -70,7 +70,7 @@
 +(void)showAlertWithTitle:(NSString *)strTitle andMessage:(NSString *)strMessage delegate:(id)delegate
 {
     UIAlertController *alertController = [UIAlertController
-                                          alertControllerWithTitle:@"Alert!"
+                                          alertControllerWithTitle:@""
                                           message:strMessage
                                           preferredStyle:UIAlertControllerStyleAlert];
     
