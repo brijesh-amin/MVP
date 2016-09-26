@@ -34,7 +34,7 @@
 @synthesize txtcountrycode;
 
 
-
+@synthesize lbltermcondions;
 
 //Button
 @synthesize btnLocation;
@@ -69,6 +69,16 @@ AppDelegate *appDelegateRegister;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    
+    lbltermcondions.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
+     initWithTarget:self action:@selector(didTapLabelWithGesture:)];
+    [lbltermcondions addGestureRecognizer:tapGesture];
+
+    
+    
+
     
     txtName.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"Firstname" attributes:@{NSForegroundColorAttributeName: [UIColor blackColor]}];
     txtName.leftView = [SHARED_APPDELEGATE getTextFieldRightAndLeftView];
@@ -138,6 +148,10 @@ AppDelegate *appDelegateRegister;
     txtDay.rightViewMode = UITextFieldViewModeAlways;
     txtDay.layer.cornerRadius = 15.0;
     
+    
+    txtDay.delegate = self;
+    txtMonth.delegate = self;
+    txtyear.delegate = self;
     txtyear.attributedPlaceholder = [[NSAttributedString alloc] initWithString:YYYY attributes:@{NSForegroundColorAttributeName: [UIColor blackColor]}];
     txtyear.leftView = [SHARED_APPDELEGATE getTextFieldRightAndLeftViewDate];
     txtyear.rightView = [SHARED_APPDELEGATE getTextFieldRightAndLeftViewDate];
@@ -180,6 +194,12 @@ AppDelegate *appDelegateRegister;
     constHeightMale.constant = 0.0f;
     constHeightFemale.constant = 0.0f;
 }
+- (void)didTapLabelWithGesture:(UITapGestureRecognizer *)tapGesture {
+      NSLog(@"strType>>> %@",@"term and condion clicked");
+    [CommonClass showAlertWithTitle:@"" andMessage:@"Coming soon!" delegate:self];
+
+}
+
 
 #pragma mark -
 #pragma mark - ViewWillDisappear Method
@@ -225,7 +245,64 @@ AppDelegate *appDelegateRegister;
         [textField resignFirstResponder];
         return YES;
     }
+    
+    
+    
     return NO;
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    // Prevent crashing undo bug – see note below.
+    
+    
+    if (range.length==1 && string.length==0){
+           NSLog(@"rangelength tapped"),range.length;
+        return true;
+    }
+    
+
+    NSInteger rangelength = range.length;
+    NSString* myNewString = [NSString stringWithFormat:@"%i", rangelength];
+     NSLog(myNewString);
+    
+    NSInteger stringlen = textField.text.length;
+    
+    NSString* myNewStringlen = [NSString stringWithFormat:@"%i", stringlen];
+    NSLog(myNewStringlen);
+
+    if (textField == txtDay) {
+        if (range.length==1 && string.length==0){
+            NSLog(@"rangelength tapped"),range.length;
+            return true;
+        }
+        
+        
+        if ( txtDay.text.length  > 1) {
+            return false;
+        }else{
+            return true;
+        }
+    }else if(textField == txtMonth){
+        
+        if (range.length==1 && string.length==0){
+            NSLog(@"rangelength tapped"),range.length;
+            return true;
+        }
+        if (txtMonth.text.length > 1){
+            return  false;
+        }
+    }
+    else if(textField == txtyear){
+        
+        if (range.length==3 && string.length==2){
+            NSLog(@"rangelength tapped"),range.length;
+            return true;
+        }
+        if (txtyear.text.length > 3){
+            return  false;
+        }
+    }
+    return true;
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
@@ -364,15 +441,30 @@ AppDelegate *appDelegateRegister;
     [self presentPopupViewController:viewSelect animationType:MJPopupViewAnimationFade];
     
 }
-
-- (IBAction)onClickCheckBtn:(UIButton *)sender {
+- (IBAction)btnCheck:(id)sender {
     
     if ([btnCheckMark isSelected]) {
         [btnCheckMark setSelected:NO];
     }else{
         [btnCheckMark setSelected:YES];
     }
+
 }
+
+
+- (void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    
+}
+
+//- (IBAction)onClickCheckBtn:(UIButton *)sender {
+//    
+//    if ([btnCheckMark isSelected]) {
+//        [btnCheckMark setSelected:NO];
+//    }else{
+//        [btnCheckMark setSelected:YES];
+//    }
+//}
 
 -(void)selectSizePopUp:(NSString *)strSize andReturnType:(NSString *)strType
 {
@@ -528,6 +620,13 @@ AppDelegate *appDelegateRegister;
     return YES;
 }
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"ok clicked");
+  
+}
+
+
 - (IBAction)onClickSubmitBtn:(UIButton *)sender {
     
     /*
@@ -568,8 +667,8 @@ AppDelegate *appDelegateRegister;
             [params setObject:txtlastname.text forKey:@"lname"];
             [params setObject:txtEmailID.text forKey:@"email"];
             [params setObject:txtConfirmPassword.text forKey:@"password"];
-            
-            [params setObject:txtcountrycode.text forKey:@"cc"];
+        
+            [params setObject:@"1" forKey:@"cc"];
             [params setObject:txtMobile.text forKey:@"Mobile"];
             [params setObject:@"London" forKey:@"location"];
             [params setObject:strDate forKey:@"bdate"];
@@ -586,8 +685,12 @@ AppDelegate *appDelegateRegister;
                 NSLog(@"ResponceLogin %@",responseObject);
                 
                 if ([[responseObject objectForKey:@"Status"] boolValue]) {
-                    [CommonClass showAlertWithTitle:provideAlert andMessage:[responseObject objectForKey:@"message"] delegate:self];
-                    [self.navigationController popViewControllerAnimated:YES];
+                    //[CommonClass showAlertWithTitle:provideAlert andMessage:[responseObject objectForKey:@"message"] delegate:self];
+                    //[self.navigationController popViewControllerAnimated:YES];
+                    
+                    LoginView *viewLogin = [[LoginView alloc] initWithNibName:@"LoginView" bundle:nil];
+                  [self.navigationController pushViewController:viewLogin animated:YES];
+                    
                 }else{
                     [CommonClass showAlertWithTitle:provideAlert andMessage:@"SomeThings is Wrong" delegate:self];
                 }
@@ -620,7 +723,7 @@ AppDelegate *appDelegateRegister;
             [params setObject:txtEmailID.text forKey:@"email"];
             
             [params setObject:txtConfirmPassword.text forKey:@"password"];
-            [params setObject:txtcountrycode.text forKey:@"cc"];
+            [params setObject:@"1" forKey:@"cc"];
             [params setObject:txtMobile.text forKey:@"Mobile"];
             
             [params setObject:@"Rajkot" forKey:@"location"];
@@ -635,7 +738,10 @@ AppDelegate *appDelegateRegister;
                 
                 [SHARED_APPDELEGATE hideLoadingView];
                 NSLog(@"ResponceLogin %@",responseObject);
-                [self.navigationController popViewControllerAnimated:YES];
+               // [self.navigationController popViewControllerAnimated:YES];
+                
+                LoginView *viewLogin = [[LoginView alloc] initWithNibName:@"LoginView" bundle:nil];
+                [self.navigationController pushViewController:viewLogin animated:YES];
                 
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                 
@@ -653,9 +759,12 @@ AppDelegate *appDelegateRegister;
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

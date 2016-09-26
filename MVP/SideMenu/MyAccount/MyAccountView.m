@@ -55,7 +55,7 @@
 @synthesize strWaistSize;
 @synthesize strColarSize;
 @synthesize strDeviceID;
-
+@synthesize srlview;
 //UIView
 @synthesize viewMale;
 @synthesize viewFemale;
@@ -229,6 +229,10 @@
     txtyear.rightViewMode = UITextFieldViewModeAlways;
     txtyear.layer.cornerRadius = 15.0;
     
+    
+    txtDay.delegate = self;
+    txtMonth.delegate = self;
+    txtyear.delegate = self;
     txtcountrycode.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"CC" attributes:@{NSForegroundColorAttributeName: [UIColor blackColor]}];
     txtcountrycode.leftView = [SHARED_APPDELEGATE getTextFieldRightAndLeftView];
     txtcountrycode.rightView = [SHARED_APPDELEGATE getTextFieldRightAndLeftView];
@@ -275,6 +279,15 @@
     
     btnSubmit.layer.cornerRadius = 15.0f;
     btnChangePic.layer.cornerRadius = 20.f;
+    
+     [scrollV setContentOffset:CGPointMake(0,2000) animated:NO];
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+     [scrollV setContentOffset:CGPointMake(0,2000) animated:NO];
+    
 }
 
 #pragma mark -
@@ -770,7 +783,7 @@
           //  [params setObject:strDeviceID forKey:@"device_id"];
             [params setObject:txtConfirmPass.text forKey:@"password"];
             // new added
-             [params setObject:txtcountrycode.text forKey:@"cc"];
+             [params setObject:@"1" forKey:@"cc"];
             [params setObject:txtMobile.text forKey:@"Mobile"];
             [params setObject:@"London" forKey:@"location"];
             //[params setObject:_strImgProfilePic forKey:@"image_url"];
@@ -907,5 +920,44 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    // Prevent crashing undo bug – see note below.
+    if (textField == txtDay) {
+        if (range.length==1 && string.length==0){
+            NSLog(@"rangelength tapped"),range.length;
+            return true;
+        }
+        
+        
+        if ( txtDay.text.length  > 1) {
+            return false;
+        }else{
+            return true;
+        }
+    }else if(textField == txtMonth){
+        
+        if (range.length==1 && string.length==0){
+            NSLog(@"rangelength tapped"),range.length;
+            return true;
+        }
+        if (txtMonth.text.length > 1){
+            return  false;
+        }
+    }
+    else if(textField == txtyear){
+        
+        if (range.length==3 && string.length==2){
+            NSLog(@"rangelength tapped"),range.length;
+            return true;
+        }
+        if (txtyear.text.length > 3){
+            return  false;
+        }
+    }
+    return true;
+}
+
 
 @end
