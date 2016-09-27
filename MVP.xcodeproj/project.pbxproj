@@ -1298,6 +1298,9 @@
 							com.apple.Keychain = {
 								enabled = 0;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 						};
 					};
 					7DF7C8FD1CE6D3D700EF8D0D = {
@@ -1635,7 +1638,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MVP Share/MVP Share.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: NOW PAP LIMITED (44SDVW6636)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				INFOPLIST_FILE = "MVP Share/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
@@ -1655,7 +1658,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MVP Share/MVP Share.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: NOW PAP LIMITED (44SDVW6636)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				INFOPLIST_FILE = "MVP Share/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
