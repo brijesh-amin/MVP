@@ -184,6 +184,7 @@
         if ([arrChatList count] > indexPath.row) {
             
             PapChat *objPap = [arrChatList objectAtIndex:indexPath.row];
+            cell.lblUserName.hidden = true;
             [cell setPapChatHomeData:objPap];
         }
             return cell;
@@ -195,7 +196,7 @@
             cell = [nib objectAtIndex:0];
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
+         cell.lblUserName.hidden = true;
         if ([arrChatList count] > indexPath.row) {
             
             PapChat *objPap = [arrChatList objectAtIndex:indexPath.row];

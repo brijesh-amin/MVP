@@ -240,6 +240,7 @@
     UILabel *lblTitle = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, SHARED_APPDELEGATE.window.frame.size.width-120 , 35)];
     lblTitle.font = [UIFont fontWithName:@"ArialMT" size:size];
     lblTitle.text = title;
+    //lblTitle.backgroundColor = [UIColor redColor];
     lblTitle.textAlignment = NSTextAlignmentCenter;
     lblTitle.textColor =[UIColor blackColor];
     //    lblTitle.font = [UIFont systemFontOfSize:size];

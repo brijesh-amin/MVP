@@ -66,6 +66,7 @@
             for (int i = 0; i < atribute.count; i++) {
                 if ([strFinalAttribute length] > 0) {
                     strFinalAttribute = [NSString stringWithFormat:@"%@\n%@",strFinalAttribute,[atribute objectAtIndex:i]];
+                    
                 } else {
                     strFinalAttribute = [NSString stringWithFormat:@"%@",[atribute objectAtIndex:i]];
                 }
@@ -86,7 +87,11 @@
                     strFinalNoOfNo = [NSString stringWithFormat:@"%@",[noOfNo objectAtIndex:i]];
                 }
             }
+            
+            
+        
 
+            
             lblAttribute.text = strFinalAttribute;
             lblNoofYes.text = strFinaNoOfYes;
             lbNoOfNo.text = strFinalNoOfNo;

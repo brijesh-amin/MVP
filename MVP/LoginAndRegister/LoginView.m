@@ -68,6 +68,15 @@ AppDelegate *appDelegateLogin;
     btnRegister.layer.cornerRadius = 20.0f;
 }
 
+
+
+
+- (void)didTapLabelWithGesture:(UITapGestureRecognizer *)tapGesture {
+    NSLog(@"strType>>> %@",@"term and condion clicked");
+   
+    
+}
+
 #pragma mark -
 #pragma mark - ViewWillDisappear Method
 
@@ -209,6 +218,9 @@ AppDelegate *appDelegateLogin;
     
 }
 
+
+
+
 - (IBAction)onClickForgotPasswordBtn:(UIButton *)sender {
     
     ForgotPasswordView *viewForgot = [[ForgotPasswordView alloc] initWithNibName:@"ForgotPasswordView" bundle:nil];
@@ -222,7 +234,7 @@ AppDelegate *appDelegateLogin;
 }
 
 - (IBAction)onClickTermsAndCondition:(UIButton *)sender {
-    
+     [CommonClass showAlertWithTitle:@"" andMessage:@"Coming soon!" delegate:self];
 }
 
 - (void)didReceiveMemoryWarning {

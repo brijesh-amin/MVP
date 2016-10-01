@@ -47,6 +47,7 @@
     }
 
     lblUserName.text = objPap.name;
+    lblUserName.hidden = true;
     lblUserComment.text = objPap.item_type;
 
     NSArray *components = [objPap.DtStamp componentsSeparatedByString:@" "];
