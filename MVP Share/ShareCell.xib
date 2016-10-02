@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ShareCell">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hCx-ba-fsb" customClass="AsyImage">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <animations/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FTi-Ok-05o">
+                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        <animations/>
+                        <connections>
+                            <action selector="onclickSelection:" destination="gTV-IL-0wX" eventType="touchUpInside" id="1Gr-DL-eRy"/>
+                        </connections>
+                    </button>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CheckMark" translatesAutoresizingMaskIntoConstraints="NO" id="qT0-8O-m8l">
+                        <rect key="frame" x="84" y="84" width="16" height="16"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="GpH-zo-pBF"/>
+                            <constraint firstAttribute="height" constant="16" id="qUe-ZR-jQ6"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <animations/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="FTi-Ok-05o" secondAttribute="bottom" id="8Ra-3z-Q77"/>
+                <constraint firstItem="FTi-Ok-05o" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FXn-kf-cEI"/>
+                <constraint firstAttribute="bottom" secondItem="hCx-ba-fsb" secondAttribute="bottom" id="SaN-Pc-A0o"/>
+                <constraint firstAttribute="bottom" secondItem="qT0-8O-m8l" secondAttribute="bottom" id="YLZ-Nl-XIc"/>
+                <constraint firstItem="FTi-Ok-05o" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ZQx-MN-cts"/>
+                <constraint firstAttribute="trailing" secondItem="hCx-ba-fsb" secondAttribute="trailing" id="fr7-qW-AFf"/>
+                <constraint firstItem="hCx-ba-fsb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hOi-Tk-1cb"/>
+                <constraint firstAttribute="trailing" secondItem="qT0-8O-m8l" secondAttribute="trailing" id="sKo-lT-ArI"/>
+                <constraint firstAttribute="trailing" secondItem="FTi-Ok-05o" secondAttribute="trailing" id="xRM-wh-myt"/>
+                <constraint firstItem="hCx-ba-fsb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zcW-zq-UwL"/>
+            </constraints>
+            <size key="customSize" width="100" height="100"/>
+            <connections>
+                <outlet property="btnSelection" destination="FTi-Ok-05o" id="OR4-BB-0cm"/>
+                <outlet property="imgLoad" destination="hCx-ba-fsb" id="Zui-wh-ptd"/>
+                <outlet property="imgRight" destination="qT0-8O-m8l" id="O6g-g9-w3v"/>
+            </connections>
+            <point key="canvasLocation" x="642" y="333"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="CheckMark" width="16" height="16"/>
+    </resources>
+</document>

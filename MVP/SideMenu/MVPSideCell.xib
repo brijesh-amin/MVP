@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Spoon-Bold.ttf">
+            <string>Spoon-Bold</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MVPSideCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserName" translatesAutoresizingMaskIntoConstraints="NO" id="nep-6D-nZo">
+                        <rect key="frame" x="16" y="10" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="ajc-pC-M8w"/>
+                            <constraint firstAttribute="height" constant="24" id="qRM-5T-yj1"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NewsFeed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V03-2H-jFE">
+                        <rect key="frame" x="55" y="12" width="233" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="233" id="IJo-WE-CyM"/>
+                            <constraint firstAttribute="height" constant="20" id="tI0-PH-ebN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Spoon-Bold" family="Spoon-Bold" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="V03-2H-jFE" firstAttribute="leading" secondItem="nep-6D-nZo" secondAttribute="trailing" constant="15" id="Dgw-10-xwv"/>
+                    <constraint firstItem="nep-6D-nZo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="H29-4a-KBp"/>
+                    <constraint firstItem="nep-6D-nZo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="JHL-cq-Rk0"/>
+                    <constraint firstAttribute="trailing" secondItem="V03-2H-jFE" secondAttribute="trailing" constant="32" id="M3M-2M-J3t"/>
+                    <constraint firstItem="V03-2H-jFE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="hAw-Rs-KJG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="imgTitleIcon" destination="nep-6D-nZo" id="pEm-IB-1z4"/>
+                <outlet property="lblTitle" destination="V03-2H-jFE" id="nhJ-cq-SuL"/>
+            </connections>
+            <point key="canvasLocation" x="484" y="280"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="UserName" width="17" height="17"/>
+    </resources>
+</document>

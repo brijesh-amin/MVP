@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ContactCell">
+            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="edsf" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBa-pm-rLJ">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="46" id="smD-9C-UJA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V2e-Ib-KgL">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="BDR-UZ-wj2"/>
+                            <constraint firstAttribute="width" constant="30" id="Mfq-JA-b5H"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ym3-yc-kw3">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="vPC-y2-ErQ"/>
+                            <constraint firstAttribute="width" constant="30" id="zyf-dy-cTM"/>
+                        </constraints>
+                        <state key="selected" image="CheckMark"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="sBa-pm-rLJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="7N6-X9-ESp"/>
+                <constraint firstItem="sBa-pm-rLJ" firstAttribute="top" secondItem="V2e-Ib-KgL" secondAttribute="bottom" constant="1" id="JvU-N7-ebe"/>
+                <constraint firstItem="ym3-yc-kw3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Lvu-VY-gP4"/>
+                <constraint firstAttribute="trailing" secondItem="ym3-yc-kw3" secondAttribute="trailing" id="SKv-H9-ChL"/>
+                <constraint firstItem="V2e-Ib-KgL" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="WCe-L0-F94"/>
+                <constraint firstAttribute="trailing" secondItem="sBa-pm-rLJ" secondAttribute="trailing" constant="8" id="hmp-4o-uM0"/>
+                <constraint firstItem="V2e-Ib-KgL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="ulb-K4-f9Y"/>
+            </constraints>
+            <connections>
+                <outlet property="btnSelected" destination="ym3-yc-kw3" id="nWG-Ea-Yyp"/>
+                <outlet property="imgProfile" destination="V2e-Ib-KgL" id="dZi-z2-7hI"/>
+                <outlet property="lblFname" destination="sBa-pm-rLJ" id="lft-mt-VAZ"/>
+            </connections>
+            <point key="canvasLocation" x="651" y="282"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="CheckMark" width="16" height="16"/>
+    </resources>
+</document>

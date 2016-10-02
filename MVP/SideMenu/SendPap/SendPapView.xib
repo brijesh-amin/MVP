@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SendPapView">
+            <connections>
+                <outlet property="tblSendPap" destination="US0-yl-Kdd" id="0Qn-ob-rUY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginBack" translatesAutoresizingMaskIntoConstraints="NO" id="xbt-CU-kQi">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="US0-yl-Kdd">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Cxj-0E-PA7"/>
+                        <outlet property="delegate" destination="-1" id="Ujg-AD-47t"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="US0-yl-Kdd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1si-Pk-HRX"/>
+                <constraint firstItem="xbt-CU-kQi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4Sj-ip-ry3"/>
+                <constraint firstAttribute="trailing" secondItem="xbt-CU-kQi" secondAttribute="trailing" id="77a-jK-E4k"/>
+                <constraint firstItem="US0-yl-Kdd" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Xdi-lh-JAK"/>
+                <constraint firstAttribute="bottom" secondItem="xbt-CU-kQi" secondAttribute="bottom" id="c6A-cN-KhR"/>
+                <constraint firstAttribute="trailing" secondItem="US0-yl-Kdd" secondAttribute="trailing" id="ccQ-ZL-M3g"/>
+                <constraint firstAttribute="bottom" secondItem="US0-yl-Kdd" secondAttribute="bottom" id="prt-7S-hny"/>
+                <constraint firstItem="xbt-CU-kQi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vGj-gB-0SH"/>
+            </constraints>
+            <point key="canvasLocation" x="565" y="461"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="LoginBack" width="320" height="568"/>
+    </resources>
+</document>

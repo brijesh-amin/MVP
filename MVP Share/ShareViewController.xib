@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShareViewController">
+            <connections>
+                <outlet property="btnCancel" destination="vol-lT-pu9" id="3GL-ze-Xnm"/>
+                <outlet property="btnDone" destination="2ph-US-FlQ" id="Tqr-5c-0o1"/>
+                <outlet property="collectionV" destination="r54-Du-clS" id="WC7-qB-tGd"/>
+                <outlet property="view" destination="ZkA-dG-eWf" id="gmG-cN-sGe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ZkA-dG-eWf">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="r54-Du-clS">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="523"/>
+                    <animations/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fBH-LG-eoI">
+                        <size key="itemSize" width="90" height="90"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="10" minY="20" maxX="10" maxY="10"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="7yt-QF-HnG"/>
+                        <outlet property="delegate" destination="-1" id="ycx-fB-w8d"/>
+                    </connections>
+                </collectionView>
+                <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KM0-CC-Rh3">
+                    <rect key="frame" x="0.0" y="523" width="320" height="45"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ph-US-FlQ">
+                            <rect key="frame" x="240" y="8" width="70" height="30"/>
+                            <animations/>
+                            <color key="backgroundColor" red="0.79215686269999996" green="0.71372549019999998" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="pUB-PD-pZO"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                            <state key="normal" title="Done">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="onClicDone:" destination="-1" eventType="touchUpInside" id="h1x-4v-DWk"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vol-lT-pu9">
+                            <rect key="frame" x="10" y="8" width="70" height="30"/>
+                            <animations/>
+                            <color key="backgroundColor" red="0.79215686269999996" green="0.71372549019999998" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="e8C-6T-h9k"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="onClickDismiss:" destination="-1" eventType="touchUpInside" id="Ub3-Tw-foV"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="3Ib-K7-Wob"/>
+                        <constraint firstAttribute="trailing" secondItem="2ph-US-FlQ" secondAttribute="trailing" constant="10" id="GaZ-gk-Ew0"/>
+                        <constraint firstAttribute="bottom" secondItem="2ph-US-FlQ" secondAttribute="bottom" constant="7" id="MQb-Wu-Oce"/>
+                        <constraint firstItem="2ph-US-FlQ" firstAttribute="top" secondItem="KM0-CC-Rh3" secondAttribute="top" constant="8" id="R9t-5u-1SM"/>
+                        <constraint firstAttribute="bottom" secondItem="vol-lT-pu9" secondAttribute="bottom" constant="7" id="fqJ-l9-XWz"/>
+                        <constraint firstItem="vol-lT-pu9" firstAttribute="leading" secondItem="KM0-CC-Rh3" secondAttribute="leading" constant="10" id="lMh-kd-AYP"/>
+                        <constraint firstItem="vol-lT-pu9" firstAttribute="top" secondItem="KM0-CC-Rh3" secondAttribute="top" constant="8" id="nde-pp-dQ0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="r54-Du-clS" secondAttribute="bottom" constant="45" id="0Ja-Vh-5Kn"/>
+                <constraint firstItem="r54-Du-clS" firstAttribute="leading" secondItem="ZkA-dG-eWf" secondAttribute="leading" id="9SD-ul-PHG"/>
+                <constraint firstAttribute="bottom" secondItem="KM0-CC-Rh3" secondAttribute="bottom" id="Gro-rd-ptj"/>
+                <constraint firstItem="r54-Du-clS" firstAttribute="top" secondItem="ZkA-dG-eWf" secondAttribute="top" id="MYE-Xb-YkH"/>
+                <constraint firstItem="KM0-CC-Rh3" firstAttribute="leading" secondItem="ZkA-dG-eWf" secondAttribute="leading" id="SWg-v0-Ibk"/>
+                <constraint firstAttribute="trailing" secondItem="KM0-CC-Rh3" secondAttribute="trailing" id="hdy-Ga-pFb"/>
+                <constraint firstAttribute="trailing" secondItem="r54-Du-clS" secondAttribute="trailing" id="odw-A4-I2r"/>
+            </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+            <point key="canvasLocation" x="258" y="382"/>
+        </view>
+    </objects>
+</document>

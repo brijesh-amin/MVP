@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PapReceiveView">
+            <connections>
+                <outlet property="asyImage" destination="RBO-2Q-RTm" id="9sD-Vl-VTf"/>
+                <outlet property="btnDesign" destination="6UC-hJ-mBp" id="z8d-h4-zJ4"/>
+                <outlet property="btnDisLike" destination="okB-kF-1HU" id="6xH-mb-9Es"/>
+                <outlet property="btnDoNotSuits" destination="HPE-vA-oAJ" id="bxp-Sj-iRV"/>
+                <outlet property="btnLike" destination="Fl8-5F-seV" id="0be-hl-Cej"/>
+                <outlet property="btnSuits" destination="5QU-wF-L47" id="Blr-k9-gaw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="FXX-uU-4qY"/>
+                <outlet property="viewBack" destination="4nF-bc-emF" id="hxm-XB-h5K"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginBack" translatesAutoresizingMaskIntoConstraints="NO" id="N2X-tO-DAO">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cXm-3I-bv0">
+                    <rect key="frame" x="5" y="100" width="310" height="364"/>
+                    <subviews>
+                        <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nF-bc-emF">
+                            <rect key="frame" x="0.0" y="0.0" width="310" height="364"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RBO-2Q-RTm" customClass="AsyncImage">
+                                    <rect key="frame" x="71" y="83" width="172" height="178"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okB-kF-1HU">
+                            <rect key="frame" x="-7" y="171" width="71" height="22"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                            <inset key="contentEdgeInsets" minX="-15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="65" minY="5" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="No" image="DisLike">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5QU-wF-L47">
+                            <rect key="frame" x="127" y="27" width="49" height="22"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                            <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="Suits" image="upIcon">
+                                <color key="titleColor" red="0.92549019610000005" green="0.87058823529999996" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPE-vA-oAJ">
+                            <rect key="frame" x="114" y="314" width="83" height="22"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                            <inset key="contentEdgeInsets" minX="-15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="80" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="Don't Suits" image="NotSuits">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fl8-5F-seV">
+                            <rect key="frame" x="255" y="168" width="45" height="22"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
+                            <inset key="contentEdgeInsets" minX="-30" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="60" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="Yes" image="like">
+                                <color key="titleColor" red="0.92549019610000005" green="0.87058823529999996" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="4nF-bc-emF" firstAttribute="leading" secondItem="cXm-3I-bv0" secondAttribute="leading" id="9jj-ix-SRK"/>
+                        <constraint firstAttribute="trailing" secondItem="4nF-bc-emF" secondAttribute="trailing" id="Bai-v5-yhu"/>
+                        <constraint firstItem="4nF-bc-emF" firstAttribute="top" secondItem="cXm-3I-bv0" secondAttribute="top" id="aqV-VV-ZTy"/>
+                        <constraint firstAttribute="height" constant="364" id="e7s-xk-31n"/>
+                        <constraint firstAttribute="bottom" secondItem="4nF-bc-emF" secondAttribute="bottom" id="hQy-b1-kcf"/>
+                        <constraint firstAttribute="width" constant="310" id="zVC-TL-0J8"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6UC-hJ-mBp">
+                    <rect key="frame" x="49" y="51" width="221" height="29"/>
+                    <color key="backgroundColor" red="0.79215686269999996" green="0.71372549019999998" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                    <inset key="imageEdgeInsets" minX="-10" minY="5" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="Design">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="onClickDesignBtn:" destination="-1" eventType="touchUpInside" id="Sw9-pt-2H3"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="N2X-tO-DAO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="COi-me-avt"/>
+                <constraint firstItem="cXm-3I-bv0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JNt-W5-RgQ"/>
+                <constraint firstItem="6UC-hJ-mBp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="49" id="O9d-oV-eYT"/>
+                <constraint firstItem="cXm-3I-bv0" firstAttribute="top" secondItem="6UC-hJ-mBp" secondAttribute="bottom" constant="20" id="leu-6z-I0K"/>
+                <constraint firstItem="6UC-hJ-mBp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="51" id="mjY-dQ-IwD"/>
+                <constraint firstAttribute="bottom" secondItem="N2X-tO-DAO" secondAttribute="bottom" id="nRB-Im-sBg"/>
+                <constraint firstItem="N2X-tO-DAO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="nc2-Q2-1Cr"/>
+                <constraint firstAttribute="trailing" secondItem="6UC-hJ-mBp" secondAttribute="trailing" constant="50" id="r2M-o9-KBJ"/>
+                <constraint firstAttribute="trailing" secondItem="N2X-tO-DAO" secondAttribute="trailing" id="ycL-wl-7Uj"/>
+            </constraints>
+            <point key="canvasLocation" x="2175" y="577"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="DisLike" width="16" height="16"/>
+        <image name="LoginBack" width="320" height="568"/>
+        <image name="NotSuits" width="16" height="16"/>
+        <image name="like" width="12" height="11"/>
+        <image name="upIcon" width="11" height="18"/>
+    </resources>
+</document>

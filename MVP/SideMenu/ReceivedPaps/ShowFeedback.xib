@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowFeedback">
+            <connections>
+                <outlet property="segView" destination="TNt-GG-gVj" id="hnB-Fh-Tbc"/>
+                <outlet property="tvListData" destination="Sqi-DV-jWS" id="eQv-iY-ag3"/>
+                <outlet property="view" destination="Js5-jo-1qn" id="TOL-Hf-N2f"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Js5-jo-1qn">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginBack" translatesAutoresizingMaskIntoConstraints="NO" id="cuf-bK-jjj">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VFS-bk-Cwl">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sA-7R-tZL">
+                            <rect key="frame" x="8" y="20" width="304" height="29"/>
+                            <color key="backgroundColor" red="0.79215686269999996" green="0.71372549019999998" blue="0.043137254899999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                            <inset key="imageEdgeInsets" minX="-10" minY="5" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="Feedback">
+                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TNt-GG-gVj">
+                            <rect key="frame" x="0.0" y="89" width="320" height="36"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Sqi-DV-jWS">
+                            <rect key="frame" x="8" y="144" width="400" height="350"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="8sA-7R-tZL" secondAttribute="trailing" constant="8" id="6Zf-ox-nt2"/>
+                        <constraint firstItem="8sA-7R-tZL" firstAttribute="leading" secondItem="VFS-bk-Cwl" secondAttribute="leading" constant="8" id="My0-at-fZQ"/>
+                        <constraint firstItem="8sA-7R-tZL" firstAttribute="top" secondItem="VFS-bk-Cwl" secondAttribute="top" constant="20" id="nCE-L4-Wb1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cuf-bK-jjj" secondAttribute="trailing" id="4Bz-LU-gKd"/>
+                <constraint firstItem="VFS-bk-Cwl" firstAttribute="leading" secondItem="Js5-jo-1qn" secondAttribute="leading" id="8Hu-AN-L5q"/>
+                <constraint firstAttribute="trailing" secondItem="VFS-bk-Cwl" secondAttribute="trailing" id="9K7-NZ-WEb"/>
+                <constraint firstAttribute="trailing" secondItem="VFS-bk-Cwl" secondAttribute="trailing" id="L5D-U6-7C0"/>
+                <constraint firstAttribute="bottom" secondItem="VFS-bk-Cwl" secondAttribute="bottom" id="M64-2X-BLI"/>
+                <constraint firstItem="cuf-bK-jjj" firstAttribute="leading" secondItem="Js5-jo-1qn" secondAttribute="leading" id="O5D-SW-yY4"/>
+                <constraint firstAttribute="bottom" secondItem="cuf-bK-jjj" secondAttribute="bottom" id="Viy-AS-vhL"/>
+                <constraint firstItem="VFS-bk-Cwl" firstAttribute="top" secondItem="Js5-jo-1qn" secondAttribute="top" id="WhZ-cm-Tsy"/>
+                <constraint firstItem="VFS-bk-Cwl" firstAttribute="top" secondItem="Js5-jo-1qn" secondAttribute="top" id="XVe-cD-nax"/>
+                <constraint firstAttribute="bottom" secondItem="VFS-bk-Cwl" secondAttribute="bottom" id="Zv0-q8-8lO"/>
+                <constraint firstItem="VFS-bk-Cwl" firstAttribute="leading" secondItem="Js5-jo-1qn" secondAttribute="leading" id="frj-jT-oMI"/>
+                <constraint firstItem="cuf-bK-jjj" firstAttribute="top" secondItem="Js5-jo-1qn" secondAttribute="top" id="zVx-f9-YiT"/>
+            </constraints>
+            <point key="canvasLocation" x="329" y="36"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="LoginBack" width="320" height="568"/>
+    </resources>
+</document>
