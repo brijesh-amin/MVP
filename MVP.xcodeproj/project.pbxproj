@@ -239,7 +239,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1BC1512E1D6BF5F700DBF1E7 /* MVP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MVP.entitlements; sourceTree = "<group>"; };
 		3D457E111D3809DF00EE1012 /* ic_check_12pt_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_check_12pt_2x.png; sourceTree = "<group>"; };
 		3D457E131D380F1100EE1012 /* sendList_MsgId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sendList_MsgId.h; sourceTree = "<group>"; };
 		3D457E141D380F1100EE1012 /* sendList_MsgId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sendList_MsgId.m; sourceTree = "<group>"; };
@@ -1095,7 +1094,6 @@
 		7DF7C8E41CE6D3D700EF8D0D /* MVP */ = {
 			isa = PBXGroup;
 			children = (
-				1BC1512E1D6BF5F700DBF1E7 /* MVP.entitlements */,
 				7DF7C8E81CE6D3D700EF8D0D /* AppDelegate.h */,
 				7DF7C8E91CE6D3D700EF8D0D /* AppDelegate.m */,
 				7DF7C9211CE6E67800EF8D0D /* StaticClass.h */,
@@ -1277,11 +1275,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0730;
-				ORGANIZATIONNAME = Brijesh;
+				ORGANIZATIONNAME = Darshan;
 				TargetAttributes = {
 					7DCB5EBC1CF3412A00A9CAC4 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 44SDVW6636;
+						DevelopmentTeam = 8864S4J382;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
@@ -1290,19 +1288,16 @@
 					};
 					7DF7C8E11CE6D3D700EF8D0D = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 44SDVW6636;
+						DevelopmentTeam = 8864S4J382;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
 							com.apple.Keychain = {
 								enabled = 0;
-							};
-							com.apple.Push = {
-								enabled = 1;
 							};
 						};
 					};
@@ -1640,16 +1635,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MVP Share/MVP Share.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: NOW PAP LIMITED (44SDVW6636)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				INFOPLIST_FILE = "MVP Share/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				New_Setting = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nowpap.MVPApp.ShareExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = "DC.MVP.MVP-Share";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "21d549af-a65f-477c-83f7-7b10104b251b";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1660,16 +1652,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MVP Share/MVP Share.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: NOW PAP LIMITED (44SDVW6636)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				INFOPLIST_FILE = "MVP Share/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				New_Setting = "";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nowpap.MVPApp.ShareExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = "DC.MVP.MVP-Share";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "21d549af-a65f-477c-83f7-7b10104b251b";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1763,15 +1752,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MVP/MVP.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: NOW PAP LIMITED (44SDVW6636)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: NOW PAP LIMITED (44SDVW6636)";
+				CODE_SIGN_ENTITLEMENTS = "";
 				INFOPLIST_FILE = MVP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nowpap.MVPApp;
+				PRODUCT_BUNDLE_IDENTIFIER = DC.MVP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8cf2800f-0cc2-4da3-ba32-de180274642d";
 			};
 			name = Debug;
 		};
@@ -1779,15 +1765,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MVP/MVP.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: NOW PAP LIMITED (44SDVW6636)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: NOW PAP LIMITED (44SDVW6636)";
+				CODE_SIGN_ENTITLEMENTS = "";
 				INFOPLIST_FILE = MVP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.nowpap.MVPApp;
+				PRODUCT_BUNDLE_IDENTIFIER = DC.MVP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8cf2800f-0cc2-4da3-ba32-de180274642d";
 			};
 			name = Release;
 		};
